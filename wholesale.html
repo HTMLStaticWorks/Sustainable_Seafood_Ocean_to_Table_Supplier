@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wholesale Seafood Orders | Tide & Trace</title>
+    <meta name="description" content="Seafood supply built around your operation. Submit your wholesale enquiry for premium hospitality sourcing.">
+    <meta property="og:title" content="Wholesale Seafood Orders | Tide & Trace">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .type-selector, .species-grid { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; justify-content: center; }
+        .type-btn { padding: 1rem 1.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-weight: 500; cursor: pointer; transition: all var(--transition-fast); background: var(--card-bg); color: var(--text-primary); text-align: center; }
+        .type-btn:hover, .type-btn.active { border-color: var(--accent-main); background: var(--bg-secondary); }
+        
+        .checkbox-card { border: 1px solid var(--border-color); padding: 1.5rem; border-radius: var(--radius-md); background: var(--card-bg); cursor: pointer; transition: all var(--transition-fast); text-align: center; }
+        .checkbox-card:hover { border-color: var(--accent-main); }
+        .checkbox-card input { display: none; }
+        .checkbox-card:has(input:checked) { border-color: var(--accent-main); background: var(--bg-secondary); }
+
+        @media (max-width: 768px) {
+            .type-selector, .species-grid {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .wholesale-info-btn {
+                padding: 1rem 1rem !important;
+                font-size: 0.9rem !important;
+                letter-spacing: 0 !important;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+
+    <!-- GLOBAL NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
+    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+</svg>
+                <div>
+                    <div class="nav-logo-text">TIDE & TRACE</div>
+                    <div class="nav-logo-desc">Sustainable Seafood</div>
+                </div>
+            </a>
+
+            <nav class="nav-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="traceability.html" class="nav-link">Traceability</a>
+                <a href="wholesale.html" class="nav-link active">Wholesale Orders</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-right">
+                <button class="nav-icon-btn theme-toggle" aria-label="Toggle Theme">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="nav-icon-btn rtl-toggle" aria-label="Toggle RTL">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3L4 7l4 4"/><path d="M4 7h16"/><path d="M16 21l4-4-4-4"/><path d="M20 17H4"/></svg>
+                </button>
+
+                <a href="#" data-modal-target="wholesale-modal" class="btn btn-primary">Request Wholesale</a>
+            </div>
+
+            <button class="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE SIDEBAR -->
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+        <button class="sidebar-close" aria-label="Close menu" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; cursor: pointer; color: var(--text-primary); z-index: 10;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="sidebar-link">Home</a>
+            <a href="home-2.html" class="sidebar-link">Home 2</a>
+            <a href="about.html" class="sidebar-link">About</a>
+            <a href="products.html" class="sidebar-link">Products</a>
+            <a href="traceability.html" class="sidebar-link">Traceability</a>
+            <a href="wholesale.html" class="sidebar-link active">Wholesale Orders</a>
+            <a href="contact.html" class="sidebar-link">Contact</a>
+
+        </nav>
+        <div class="sidebar-controls" style="display: flex; gap: 3rem; width: 100%; margin-top: 2rem; margin-bottom: 1rem; justify-content: center;">
+            <button class="nav-icon-btn theme-toggle" aria-label="Toggle Theme" style="transform: scale(1.2);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </button>
+            <button class="nav-icon-btn rtl-toggle" aria-label="Toggle RTL" style="transform: scale(1.2);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3L4 7l4 4"/><path d="M4 7h16"/><path d="M16 21l4-4-4-4"/><path d="M20 17H4"/></svg>
+            </button>
+        </div>
+        <div class="sidebar-cta" style="width: 100%;">
+            <a href="#" class="btn btn-primary" style="width: 100%" data-modal-target="wholesale-modal">REQUEST WHOLESALE</a>
+        </div>
+    </aside>
+
+    <main style="padding-top: var(--nav-height);">
+        <!-- SECTION 01 - HERO -->
+        <section class="hero-ocean" style="min-height: 70svh; align-items: center;">
+            <div class="hero-bg">
+                <img src="assets/images/wholesale.webp" alt="Wholesale operations">
+            </div>
+            <div class="hero-overlay" style="background: rgba(7, 59, 76, 0.85);"></div>
+            <div class="container relative z-10 text-center reveal">
+                <h1 class="editorial-heading" style="color: var(--c-sand); margin-bottom: 1.5rem;">SEAFOOD SUPPLY BUILT AROUND YOUR OPERATION.</h1>
+                <p style="color: rgba(244, 239, 230, 0.8); font-size: 1.1rem; max-width: 600px; margin-inline: auto; margin-bottom: 2rem;">Tell us what species, formats and volumes you need, and our team can review your enquiry.</p>
+                <a href="#" data-modal-target="wholesale-modal" class="btn btn-primary">START WHOLESALE ENQUIRY</a>
+            </div>
+        </section>
+
+        <!-- ENQUIRY BUILDER CONTAINER -->
+        <div id="enquiry-form" style="background-color: var(--bg-secondary); padding-block: 4rem;">
+            <div class="container">
+                <div style="background-color: var(--card-bg); border-radius: var(--radius-lg); padding: clamp(2rem, 5vw, 4rem); box-shadow: var(--shadow-sm);">
+                    
+                    <form id="wholesale-builder">
+                        <!-- SECTION 02 - BUSINESS TYPE -->
+                        <div class="reveal" style="margin-bottom: 4rem; border-bottom: 1px solid var(--border-color); padding-bottom: 3rem;">
+                            <h3 style="margin-bottom: 1.5rem; text-align: center;">1. BUSINESS TYPE</h3>
+                            <div class="type-selector">
+                                <label class="type-btn active"><input type="radio" name="business_type" value="Restaurant" checked class="sr-only">Restaurant</label>
+                                <label class="type-btn"><input type="radio" name="business_type" value="Hotel" class="sr-only">Hotel</label>
+                                <label class="type-btn"><input type="radio" name="business_type" value="Catering" class="sr-only">Catering</label>
+                                <label class="type-btn"><input type="radio" name="business_type" value="Retail" class="sr-only">Retail</label>
+                                <label class="type-btn"><input type="radio" name="business_type" value="Food Service" class="sr-only">Food Service</label>
+                                <label class="type-btn"><input type="radio" name="business_type" value="Distributor" class="sr-only">Distributor</label>
+                                <label class="type-btn"><input type="radio" name="business_type" value="Other" class="sr-only">Other</label>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 03 - WHAT ARE YOU SOURCING? -->
+                        <div class="reveal" style="margin-bottom: 4rem; border-bottom: 1px solid var(--border-color); padding-bottom: 3rem;">
+                            <h3 style="margin-bottom: 1.5rem; text-align: center;">2. WHAT ARE YOU SOURCING?</h3>
+                            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.9rem;">Select all that apply. (Illustrative frontend demo - no real inventory claimed).</p>
+                            
+                            <div class="grid-3 species-grid">
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="species" value="Salmon">
+                                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Salmon</div>
+                                    <div style="font-size: 0.85rem; color: var(--text-secondary);">Whole / Fillet / Portioned</div>
+                                </label>
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="species" value="Tuna">
+                                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Tuna</div>
+                                    <div style="font-size: 0.85rem; color: var(--text-secondary);">Loins / Steaks</div>
+                                </label>
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="species" value="Sea Bass">
+                                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Sea Bass</div>
+                                    <div style="font-size: 0.85rem; color: var(--text-secondary);">Whole / Fillet</div>
+                                </label>
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="species" value="Prawns">
+                                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Prawns</div>
+                                    <div style="font-size: 0.85rem; color: var(--text-secondary);">Whole / Shell-on</div>
+                                </label>
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="species" value="Crab">
+                                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Crab</div>
+                                    <div style="font-size: 0.85rem; color: var(--text-secondary);">Whole / Clusters</div>
+                                </label>
+                            </div>
+                            
+                            <div class="grid-2" style="margin-top: 2rem; gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Product Format Required</label>
+                                    <select class="form-control form-select">
+                                        <option>Whole</option>
+                                        <option>Fillet</option>
+                                        <option>Portioned</option>
+                                        <option>Shell-on</option>
+                                        <option>Prepared</option>
+                                        <option>Other / Mixed</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Estimated Volume / Frequency</label>
+                                    <select class="form-control form-select">
+                                        <option>Daily supply</option>
+                                        <option>Weekly supply</option>
+                                        <option>Monthly volume</option>
+                                        <option>One-off order</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 04 - ENQUIRY DETAILS -->
+                        <div class="reveal">
+                            <h3 style="margin-bottom: 2rem; text-align: center;">3. CONTACT DETAILS</h3>
+                            
+                            <div class="grid-2" style="gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Business Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Contact Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="grid-2" style="gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Phone</label>
+                                    <input type="tel" class="form-control">
+                                </div>
+                            </div>
+                            
+                            <div class="grid-2" style="gap: 1.5rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Delivery Region / City</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Required Date (Optional)</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: 2rem;">
+                                <label class="form-label">Special Requirements or Message</label>
+                                <textarea class="form-control" required></textarea>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary" style="min-width: 250px;">SUBMIT WHOLESALE ENQUIRY</button>
+                                <div style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-secondary);">Frontend-only submission. No real data is processed.</div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW SECTION 04B - DEDICATED SUPPORT (No Cards Layout) -->
+        <section class="section-padding" style="background-color: var(--bg-primary); border-top: 1px solid var(--border-color);">
+            <div class="container reveal">
+                <div class="grid-2" style="align-items: center; gap: 5rem;">
+                    <div style="padding-right: 2rem;">
+                        <h2 class="editorial-heading" style="font-size: 2.75rem; margin-bottom: 1.5rem; line-height: 1.1;">DEDICATED WHOLESALE SUPPORT</h2>
+                        <h4 style="font-size: 1.25rem; color: var(--accent-main); margin-bottom: 1.5rem; font-weight: 500;">A Partner, Not Just a Supplier.</h4>
+                        <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.1rem; margin-bottom: 2rem;">
+                            We understand that the demands of a high-end kitchen require absolute reliability. When you partner with Tide & Trace, you receive a dedicated account manager who understands your menu, your volume requirements, and your exact quality standards. 
+                        </p>
+                        <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.1rem;">
+                            From daily market updates on catch landings to priority logistics routing, our team works around the clock to ensure your seafood arrives in pristine condition, precisely when you need it.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="assets/images/DEDICATED WHOLESALE SUPPORT.png" alt="Wholesale Support Team" style="width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); display: block;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 05 - PREMIUM CTA -->
+        <section class="section-padding" style="background-color: var(--bg-secondary); position: relative; overflow: hidden;">
+            <div style="position: absolute; inset: 0; opacity: 0.05; background-image: radial-gradient(circle at 2px 2px, var(--accent-main) 1px, transparent 0); background-size: 32px 32px;"></div>
+            <div class="container reveal relative z-10" style="text-align: center; max-width: 900px; padding: 5rem 3rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                <div style="color: var(--accent-main); margin-bottom: 1.5rem; display: flex; justify-content: center;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                </div>
+                <h2 class="editorial-heading" style="font-size: 3.5rem; margin-bottom: 1.5rem; color: var(--text-primary); line-height: 1.1;">LET'S PLAN YOUR NEXT ORDER.</h2>
+                <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 600px; margin-inline: auto;">Our wholesale team is standing by to discuss custom pricing, seasonal availability, and delivery logistics tailored to your kitchen.</p>
+                <a href="#" data-modal-target="wholesale-modal" class="btn btn-primary wholesale-info-btn" style="padding: 1rem 3rem; font-size: 1.1rem; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.05em; box-shadow: 0 8px 20px rgba(0,0,0,0.15); white-space: nowrap;">REQUEST WHOLESALE INFO</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- GLOBAL WHOLESALE POPUP -->
+    <div class="modal-overlay" id="wholesale-modal">
+        <div class="modal-container">
+            <button class="modal-close" data-modal-close aria-label="Close modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            
+            <div class="modal-header">
+                <h3 class="editorial-heading" style="font-size: 2rem; margin-bottom: 0.5rem;">LET'S TALK SEAFOOD</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Submit your enquiry and our team will get in touch.</p>
+            </div>
+            
+            <form>
+                <div class="grid-2" style="gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Business Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                </div>
+                
+                <div class="grid-2" style="gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone</label>
+                        <input type="tel" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="grid-2" style="gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label">Enquiry Type</label>
+                        <select class="form-control form-select" required>
+                            <option value="">Select option...</option>
+                            <option>Wholesale Order</option>
+                            <option>Product Information</option>
+                            <option>Traceability</option>
+                            <option>General Enquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Business Type</label>
+                        <select class="form-control form-select" required>
+                            <option value="">Select option...</option>
+                            <option>Restaurant</option>
+                            <option>Hotel</option>
+                            <option>Retail</option>
+                            <option>Distributor</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" required></textarea>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary" style="flex: 1; text-transform: uppercase;">SEND ENQUIRY</button>
+                    <button type="button" class="btn btn-secondary" style="text-transform: uppercase;" data-modal-close>CANCEL</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="nav-logo" style="margin-bottom: 1.5rem;">
+                        <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
+    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+</svg>
+                        <div>
+                            <div class="nav-logo-text" style="font-size: 1rem;">TIDE & TRACE</div>
+                            <div class="nav-logo-desc" style="font-size: 0.6rem;">Sustainable Seafood</div>
+                        </div>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 250px;">Premium sustainable seafood supplier serving hospitality businesses with transparency.</p>
+                    
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="X">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">EXPLORE</h4>
+                    <nav class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="home-2.html">Home 2</a>
+                        <a href="about.html">About</a>
+                        <a href="products.html">Products</a>
+                    </nav>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">SUPPLY</h4>
+                    <nav class="footer-links">
+                        <a href="traceability.html">Traceability</a>
+                        <a href="wholesale.html">Wholesale Orders</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">OCEAN NOTES & SUPPLY UPDATES</h4>
+                    <form style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <input type="email" class="form-control" placeholder="Email Address" required style="background: transparent; border-color: rgba(128,128,128,0.3);">
+                        <button type="submit" class="btn btn-secondary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div>&copy; 2026 Tide & Trace. Fictional demo placeholder.</div>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Simple logic for the type selector styling
+        document.querySelectorAll('.type-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.type-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

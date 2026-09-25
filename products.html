@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seafood Products | Tide & Trace</title>
+    <meta name="description" content="Explore our premium range of responsibly sourced seafood species, carefully selected for wholesale and hospitality.">
+    <meta property="og:title" content="Seafood Products | Tide & Trace">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+
+    <!-- GLOBAL NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
+    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+</svg>
+                <div>
+                    <div class="nav-logo-text">TIDE & TRACE</div>
+                    <div class="nav-logo-desc">Sustainable Seafood</div>
+                </div>
+            </a>
+
+            <nav class="nav-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="products.html" class="nav-link active">Products</a>
+                <a href="traceability.html" class="nav-link">Traceability</a>
+                <a href="wholesale.html" class="nav-link">Wholesale Orders</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-right">
+                <button class="nav-icon-btn theme-toggle" aria-label="Toggle Theme">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="nav-icon-btn rtl-toggle" aria-label="Toggle RTL">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3L4 7l4 4"/><path d="M4 7h16"/><path d="M16 21l4-4-4-4"/><path d="M20 17H4"/></svg>
+                </button>
+
+                <a href="#" class="btn btn-primary" data-modal-target="wholesale-modal">Request Wholesale</a>
+            </div>
+
+            <button class="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE SIDEBAR -->
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+        <button class="sidebar-close" aria-label="Close menu" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; cursor: pointer; color: var(--text-primary); z-index: 10;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="sidebar-link">Home</a>
+            <a href="home-2.html" class="sidebar-link">Home 2</a>
+            <a href="about.html" class="sidebar-link">About</a>
+            <a href="products.html" class="sidebar-link active">Products</a>
+            <a href="traceability.html" class="sidebar-link">Traceability</a>
+            <a href="wholesale.html" class="sidebar-link">Wholesale Orders</a>
+            <a href="contact.html" class="sidebar-link">Contact</a>
+
+        </nav>
+        <div class="sidebar-controls" style="display: flex; gap: 3rem; width: 100%; margin-top: 2rem; margin-bottom: 1rem; justify-content: center;">
+            <button class="nav-icon-btn theme-toggle" aria-label="Toggle Theme" style="transform: scale(1.2);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </button>
+            <button class="nav-icon-btn rtl-toggle" aria-label="Toggle RTL" style="transform: scale(1.2);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3L4 7l4 4"/><path d="M4 7h16"/><path d="M16 21l4-4-4-4"/><path d="M20 17H4"/></svg>
+            </button>
+        </div>
+        <div class="sidebar-cta" style="width: 100%;">
+            <a href="#" class="btn btn-primary" style="width: 100%" data-modal-target="wholesale-modal">REQUEST WHOLESALE</a>
+        </div>
+    </aside>
+
+    <main style="padding-top: var(--nav-height);">
+        <!-- SECTION 01 - HERO -->
+        <section class="hero-ocean" style="min-height: 60svh; align-items: center;">
+            <div class="hero-bg">
+                <img src="assets/images/species-salmon.webp" alt="Fresh seafood">
+            </div>
+            <div class="hero-overlay" style="background: rgba(7, 59, 76, 0.75);"></div>
+            <div class="container relative z-10 text-center reveal">
+                <h1 class="editorial-heading" style="color: var(--c-sand);">SEAFOOD SELECTED WITH PURPOSE.</h1>
+            </div>
+        </section>
+
+        <!-- SECTION 02 - SPECIES FILTER -->
+        <section class="section-padding" style="padding-bottom: 2rem;">
+            <div class="container text-center">
+                <div class="species-selector reveal">
+                    <button class="species-btn active" data-filter="all">ALL</button>
+                    <button class="species-btn" data-filter="salmon">SALMON</button>
+                    <button class="species-btn" data-filter="tuna">TUNA</button>
+                    <button class="species-btn" data-filter="sea-bass">SEA BASS</button>
+                    <button class="species-btn" data-filter="prawns">PRAWNS</button>
+                    <button class="species-btn" data-filter="crab">CRAB</button>
+                    <button class="species-btn" data-filter="mackerel">MACKEREL</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 03 - PRODUCT CATALOGUE -->
+        <section class="section-padding" style="padding-top: 0;">
+            <div class="container">
+                <div class="grid-3" id="product-grid">
+                    
+                    <!-- Salmon -->
+                    <div class="product-card" data-category="salmon">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/species-salmon.webp" alt="Atlantic Salmon">
+                            <span class="product-badge">Aquaculture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Atlantic Salmon</h3>
+                            <p class="product-desc">Rich, buttery texture with deep color. Farmed using advanced practices.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">North Atlantic</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Year-round</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="salmon">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Pacific King Salmon.png" alt="Pacific King Salmon">
+                            <span class="product-badge">Wild Capture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Pacific King Salmon</h3>
+                            <p class="product-desc">The highest oil content of all wild salmon. Incredibly rich flavor.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Pacific Northwest</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Summer</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="salmon">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Sockeye Salmon.png" alt="Sockeye Salmon">
+                            <span class="product-badge">Wild Capture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Sockeye Salmon</h3>
+                            <p class="product-desc">Vibrant red flesh and robust flavor. Perfect for smoking or grilling.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Alaska</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Summer/Fall</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Tuna -->
+                    <div class="product-card" data-category="tuna">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Yellowfin Tuna.png" alt="Yellowfin Tuna">
+                            <span class="product-badge">Wild Capture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Yellowfin Tuna</h3>
+                            <p class="product-desc">Firm texture with deep red color, ideal for premium raw applications.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Pacific Ocean</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Summer/Fall</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="tuna">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Albacore Tuna.png" alt="Albacore Tuna">
+                            <span class="product-badge">Wild Capture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Albacore Tuna</h3>
+                            <p class="product-desc">Lighter flesh with a milder flavor. Line-caught for sustainability.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">North Atlantic</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Summer</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="tuna">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Bluefin Tuna.png" alt="Bluefin Tuna">
+                            <span class="product-badge">Aquaculture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Bluefin Tuna</h3>
+                            <p class="product-desc">Responsibly ranched to ensure consistent high fat content (Toro).</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Mediterranean</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Winter</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Sea Bass -->
+                    <div class="product-card" data-category="sea-bass">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/European Sea Bass.png" alt="European Sea Bass">
+                            <span class="product-badge">Wild Capture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">European Sea Bass</h3>
+                            <p class="product-desc">Flaky, delicate white meat. Sustainably caught using line methods.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Mediterranean</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Spring/Summer</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sea-bass">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Chilean Sea Bass.png" alt="Chilean Sea Bass">
+                            <span class="product-badge">Wild Capture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Chilean Sea Bass</h3>
+                            <p class="product-desc">Incredibly rich and buttery. MSC certified from deep southern waters.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Southern Ocean</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Year-round</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sea-bass">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Black Sea Bass.png" alt="Black Sea Bass">
+                            <span class="product-badge">Wild Capture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Black Sea Bass</h3>
+                            <p class="product-desc">Firm, lean, and highly versatile for roasting or pan-searing.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Mid-Atlantic</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Summer</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Prawns -->
+                    <div class="product-card" data-category="prawns">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/King Prawns.png" alt="King Prawns">
+                            <span class="product-badge">Aquaculture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">King Prawns</h3>
+                            <p class="product-desc">Sweet, crisp texture. Harvested carefully to preserve natural sweetness.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Coastal Farms</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Year-round</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="prawns">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Tiger Prawns.png" alt="Tiger Prawns">
+                            <span class="product-badge">Aquaculture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Tiger Prawns</h3>
+                            <p class="product-desc">Large, impressive presentation with a pronounced, robust flavor.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Indo-Pacific</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Year-round</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="prawns">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Spot Prawns.png" alt="Spot Prawns">
+                            <span class="product-badge">Wild Capture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Spot Prawns</h3>
+                            <p class="product-desc">Delicate and sweet, highly prized by chefs for raw preparations.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">North Pacific</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Spring</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Crab -->
+                    <div class="product-card" data-category="crab">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Snow Crab.png" alt="Snow Crab">
+                            <span class="product-badge">Wild Capture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Snow Crab</h3>
+                            <p class="product-desc">Delicate, sweet meat from strictly managed wild-capture fisheries.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">North Pacific</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Winter</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="crab">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Dungeness Crab.png" alt="Dungeness Crab">
+                            <span class="product-badge">Wild Capture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Dungeness Crab</h3>
+                            <p class="product-desc">Sweet and tender, caught using low-impact pots that protect the seabed.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">West Coast</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Winter/Spring</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="crab">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/King Crab.png" alt="King Crab">
+                            <span class="product-badge">Wild Capture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">King Crab</h3>
+                            <p class="product-desc">The ultimate premium crab. Huge legs packed with succulent, rich meat.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Bering Sea</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Fall/Winter</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Mackerel -->
+                    <div class="product-card" data-category="mackerel">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Atlantic Mackerel.png" alt="Atlantic Mackerel">
+                            <span class="product-badge">Wild Capture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Atlantic Mackerel</h3>
+                            <p class="product-desc">Rich in flavor and oils. Caught using responsible pelagic methods.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">North Atlantic</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Fall/Winter</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="mackerel">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Spanish Mackerel.png" alt="Spanish Mackerel">
+                            <span class="product-badge">Wild Capture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Spanish Mackerel</h3>
+                            <p class="product-desc">Beautifully marbled, leaner than Atlantic but equally flavorful.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Gulf Coast</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Spring/Summer</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="mackerel">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Horse Mackerel.png" alt="Horse Mackerel">
+                            <span class="product-badge">Wild Capture</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Horse Mackerel</h3>
+                            <p class="product-desc">Highly prized for sushi (Aji). Extremely fresh, handle with care.</p>
+                            <div class="product-meta">
+                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Pacific Ocean</span></div>
+                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Summer</span></div>
+                            </div>
+                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 04A - QUALITY STANDARDS (Split Layout) -->
+        <section class="section-padding" style="background-color: var(--bg-secondary);">
+            <div class="container reveal">
+                <div class="grid-2" style="align-items: center; gap: 4rem;">
+                    <div>
+                        <h2 class="editorial-heading" style="margin-bottom: 1.5rem;">BEYOND THE CATCH</h2>
+                        <h3 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--accent-main);">Uncompromising Quality.</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.1rem;">Our responsibility to the ocean is matched only by our dedication to culinary excellence. Every species in our catalog undergoes rigorous visual inspection and grading by our master fishmongers before dispatch.</p>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem;">By controlling the cold-chain from the exact moment of harvest, we lock in freshness and extend shelf-life, ensuring your kitchen receives seafood at its absolute peak.</p>
+                    </div>
+                    <div>
+                        <img src="assets/images/cold-chain.webp" alt="Quality Inspection" style="border-radius: var(--radius-lg); width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/3; box-shadow: var(--shadow-md);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 04B - DELIVERY FORMATS (3 Columns Text/Icons) -->
+        <section class="section-padding">
+            <div class="container reveal">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2>WHOLESALE FORMATS</h2>
+                    <p style="color: var(--text-secondary); max-width: 600px; margin-inline: auto;">Tailored processing to meet the exact requirements of your kitchen.</p>
+                </div>
+                
+                <div class="grid-3 text-center" style="gap: 3rem;">
+                    <div>
+                        <div style="width: 64px; height: 64px; border-radius: 50%; background-color: var(--bg-secondary); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--accent-main);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Whole Round</h4>
+                        <p style="color: var(--text-secondary);">Delivered untouched for maximum freshness and in-house butchery. Ideal for display and zero-waste kitchens.</p>
+                    </div>
+                    <div>
+                        <div style="width: 64px; height: 64px; border-radius: 50%; background-color: var(--bg-secondary); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--accent-main);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        </div>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Filleted & Trimmed</h4>
+                        <p style="color: var(--text-secondary);">Expertly pin-boned and trimmed to your specifications, reducing prep time and labor costs.</p>
+                    </div>
+                    <div>
+                        <div style="width: 64px; height: 64px; border-radius: 50%; background-color: var(--bg-secondary); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--accent-main);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                        </div>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Precision Portioned</h4>
+                        <p style="color: var(--text-secondary);">Cut to precise weights for perfect consistency, portion control, and streamlined service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 05 - FINAL CTA -->
+        <section class="section-padding text-center" style="background-color: var(--bg-secondary);">
+            <div class="container reveal">
+                <h2 style="margin-bottom: 2rem;">LOOKING FOR A SPECIFIC SPECIES OR FORMAT?</h2>
+                <a href="#" class="btn btn-primary" data-modal-target="wholesale-modal">REQUEST WHOLESALE INFORMATION</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- SECTION 04 - SPECIES DETAILS MODAL -->
+    <div class="modal-overlay" id="species-modal">
+        <div class="modal-container" style="max-width: 800px; padding: 0; overflow: hidden;">
+            <button class="modal-close" data-modal-close aria-label="Close modal" style="z-index: 10;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            
+            <div class="grid-2" style="gap: 0; margin: 0;">
+                <div style="aspect-ratio: 4/5; position: relative;">
+                    <img src="assets/images/species-salmon.webp" alt="Species Details" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="padding: 3rem 2rem; display: flex; flex-direction: column;">
+                    <div style="font-size: 0.8rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 0.5rem;">Aquaculture</div>
+                    <h3 class="editorial-heading" style="font-size: 2rem; margin-bottom: 1.5rem;">Atlantic Salmon</h3>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; font-size: 0.95rem;">
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                            <span style="color: var(--text-secondary);">Origin Example</span>
+                            <span style="font-weight: 500;">North Atlantic</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                            <span style="color: var(--text-secondary);">Method</span>
+                            <span style="font-weight: 500;">Ocean Pens</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                            <span style="color: var(--text-secondary);">Handling</span>
+                            <span style="font-weight: 500;">Chilled &lt; 2°C</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                            <span style="color: var(--text-secondary);">Availability</span>
+                            <span style="font-weight: 500;">Year-round</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <div style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Sustainability Information</div>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Low density farming practices ensuring high animal welfare and minimal environmental impact.</p>
+                    </div>
+                    
+                    <button class="btn btn-primary" style="width: 100%; margin-top: auto;" data-modal-target="wholesale-modal">ENQUIRE ABOUT THIS SPECIES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GLOBAL WHOLESALE POPUP -->
+    <div class="modal-overlay" id="wholesale-modal">
+        <div class="modal-container">
+            <button class="modal-close" data-modal-close aria-label="Close modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            
+            <div class="modal-header">
+                <h3 class="editorial-heading" style="font-size: 2rem; margin-bottom: 0.5rem;">LET'S TALK SEAFOOD</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Submit your enquiry and our team will get in touch.</p>
+            </div>
+            
+            <form>
+                <div class="grid-2" style="gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Business Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                </div>
+                
+                <div class="grid-2" style="gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone</label>
+                        <input type="tel" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="grid-2" style="gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label">Enquiry Type</label>
+                        <select class="form-control form-select" required>
+                            <option value="">Select option...</option>
+                            <option>Wholesale Order</option>
+                            <option>Product Information</option>
+                            <option>Traceability</option>
+                            <option>General Enquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Business Type</label>
+                        <select class="form-control form-select" required>
+                            <option value="">Select option...</option>
+                            <option>Restaurant</option>
+                            <option>Hotel</option>
+                            <option>Retail</option>
+                            <option>Distributor</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" required></textarea>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary" style="flex: 1;">Send Enquiry</button>
+                    <button type="button" class="btn btn-secondary" data-modal-close>Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="nav-logo" style="margin-bottom: 1.5rem;">
+                        <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
+    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+</svg>
+                        <div>
+                            <div class="nav-logo-text" style="font-size: 1rem;">TIDE & TRACE</div>
+                            <div class="nav-logo-desc" style="font-size: 0.6rem;">Sustainable Seafood</div>
+                        </div>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 250px;">Premium sustainable seafood supplier serving hospitality businesses with transparency.</p>
+                    
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="X">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">EXPLORE</h4>
+                    <nav class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="home-2.html">Home 2</a>
+                        <a href="about.html">About</a>
+                        <a href="products.html">Products</a>
+                    </nav>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">SUPPLY</h4>
+                    <nav class="footer-links">
+                        <a href="traceability.html">Traceability</a>
+                        <a href="wholesale.html">Wholesale Orders</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">OCEAN NOTES & SUPPLY UPDATES</h4>
+                    <form style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <input type="email" class="form-control" placeholder="Email Address" required style="background: transparent; border-color: rgba(128,128,128,0.3);">
+                        <button type="submit" class="btn btn-secondary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div>&copy; 2026 Tide & Trace. Fictional demo placeholder.</div>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

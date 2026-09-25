@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seafood Traceability | Tide & Trace</title>
+    <meta name="description" content="KNOW THE JOURNEY BEHIND YOUR SEAFOOD. Explore our transparent supply chain and traceability systems.">
+    <meta property="og:title" content="Seafood Traceability | Tide & Trace">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+
+    <!-- GLOBAL NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
+    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+</svg>
+                <div>
+                    <div class="nav-logo-text">TIDE & TRACE</div>
+                    <div class="nav-logo-desc">Sustainable Seafood</div>
+                </div>
+            </a>
+
+            <nav class="nav-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="traceability.html" class="nav-link active">Traceability</a>
+                <a href="wholesale.html" class="nav-link">Wholesale Orders</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-right">
+                <button class="nav-icon-btn theme-toggle" aria-label="Toggle Theme">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="nav-icon-btn rtl-toggle" aria-label="Toggle RTL">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3L4 7l4 4"/><path d="M4 7h16"/><path d="M16 21l4-4-4-4"/><path d="M20 17H4"/></svg>
+                </button>
+
+                <a href="#" class="btn btn-primary" data-modal-target="wholesale-modal">Request Wholesale</a>
+            </div>
+
+            <button class="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE SIDEBAR -->
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+        <button class="sidebar-close" aria-label="Close menu" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; cursor: pointer; color: var(--text-primary); z-index: 10;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="sidebar-link">Home</a>
+            <a href="home-2.html" class="sidebar-link">Home 2</a>
+            <a href="about.html" class="sidebar-link">About</a>
+            <a href="products.html" class="sidebar-link">Products</a>
+            <a href="traceability.html" class="sidebar-link active">Traceability</a>
+            <a href="wholesale.html" class="sidebar-link">Wholesale Orders</a>
+            <a href="contact.html" class="sidebar-link">Contact</a>
+
+        </nav>
+        <div class="sidebar-controls" style="display: flex; gap: 3rem; width: 100%; margin-top: 2rem; margin-bottom: 1rem; justify-content: center;">
+            <button class="nav-icon-btn theme-toggle" aria-label="Toggle Theme" style="transform: scale(1.2);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </button>
+            <button class="nav-icon-btn rtl-toggle" aria-label="Toggle RTL" style="transform: scale(1.2);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3L4 7l4 4"/><path d="M4 7h16"/><path d="M16 21l4-4-4-4"/><path d="M20 17H4"/></svg>
+            </button>
+        </div>
+        <div class="sidebar-cta" style="width: 100%;">
+            <a href="#" class="btn btn-primary" style="width: 100%" data-modal-target="wholesale-modal">REQUEST WHOLESALE</a>
+        </div>
+    </aside>
+
+    <main style="padding-top: var(--nav-height);">
+        <!-- SECTION 01 - HERO -->
+        <section class="hero-ocean" style="min-height: 70svh; align-items: center;">
+            <div class="hero-bg">
+                <img src="assets/images/traceability.webp" alt="Traceability Concept">
+            </div>
+            <div class="hero-overlay" style="background: rgba(7, 59, 76, 0.85);"></div>
+            <div class="container relative z-10 text-center reveal">
+                <h1 class="editorial-heading" style="color: var(--c-sand); margin-bottom: 1.5rem;">KNOW THE JOURNEY BEHIND YOUR SEAFOOD.</h1>
+                <p style="color: rgba(244, 239, 230, 0.8); font-size: 1.1rem; max-width: 600px; margin-inline: auto;">Our transparent systems allow you to track the origin, method, and handling of our premium supply.</p>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 02A - WHY TRACEABILITY MATTERS -->
+        <section class="section-padding" style="background-color: var(--bg-secondary);">
+            <div class="container reveal">
+                <div class="grid-2" style="gap: 4rem; align-items: center;">
+                    
+                    <!-- Left: Large Quote -->
+                    <div style="padding-right: 2rem; border-right: 1px solid var(--border-color);">
+                        <h2 class="editorial-heading" style="font-size: 2.5rem; margin-bottom: 2rem;">WHY TRACEABILITY MATTERS</h2>
+                        <div style="position: relative;">
+                            <p style="font-size: 1.75rem; color: var(--text-primary); font-family: var(--font-editorial); line-height: 1.5; position: relative; z-index: 1; font-style: italic;">
+                                In an industry historically plagued by opacity, we believe that true sustainability is impossible without total transparency.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Stacked Points -->
+                    <div style="display: flex; flex-direction: column; gap: 3rem;">
+                        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                            <div style="width: 48px; height: 48px; flex-shrink: 0; background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent-main); box-shadow: var(--shadow-sm);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text-primary);">Eliminating Seafood Fraud</h4>
+                                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 1rem;">Mislabeling is a persistent issue in global seafood supply. By implementing end-to-end tracking, we guarantee that the species you order is exactly what arrives at your kitchen.</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                            <div style="width: 48px; height: 48px; flex-shrink: 0; background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent-main); box-shadow: var(--shadow-sm);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text-primary);">Empowering Responsible Fishers</h4>
+                                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 1rem;">Traceability isn't just about data; it's about people. Our systems ensure that the premium paid for responsibly sourced seafood goes directly back to the coastal communities.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 02B - OUR TRACKING TECHNOLOGY -->
+        <section class="section-padding">
+            <div class="container reveal">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2>OUR TRACKING TECHNOLOGY</h2>
+                    <p style="color: var(--text-secondary);">The modern tools we use to maintain unbroken visibility.</p>
+                </div>
+                
+                <div class="grid-4 text-center">
+                    <div>
+                        <div style="width: 48px; height: 48px; margin: 0 auto 1.5rem; color: var(--accent-main);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Digital Catch Records</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Logged at sea or pond-side via satellite-linked tablets.</p>
+                    </div>
+                    <div>
+                        <div style="width: 48px; height: 48px; margin: 0 auto 1.5rem; color: var(--accent-main);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><rect x="7" y="7" width="3" height="3"/><rect x="14" y="7" width="3" height="3"/><rect x="7" y="14" width="3" height="3"/><rect x="14" y="14" width="3" height="3"/></svg>
+                        </div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Unique QR Lots</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Every batch receives a unique identifier that follows it to delivery.</p>
+                    </div>
+                    <div>
+                        <div style="width: 48px; height: 48px; margin: 0 auto 1.5rem; color: var(--accent-main);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+                        </div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">IoT Temp Loggers</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Continuous temperature monitoring during transit and storage.</p>
+                    </div>
+                    <div>
+                        <div style="width: 48px; height: 48px; margin: 0 auto 1.5rem; color: var(--accent-main);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                        </div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Cloud Sync</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Data is immediately available to you upon receipt of goods.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 03 - SEARCH INTERFACE -->
+        <section class="section-padding" style="background-color: var(--bg-secondary); position: relative; overflow: hidden;">
+            <div style="position: absolute; inset: 0; opacity: 0.05; background-image: radial-gradient(circle at 2px 2px, var(--accent-main) 1px, transparent 0); background-size: 32px 32px;"></div>
+            <div class="container relative z-10">
+                <div class="reveal" style="max-width: 800px; margin-inline: auto; text-align: center; background: var(--card-bg); padding: 4rem 3rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 1px solid var(--border-color);">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; background-color: rgba(30, 81, 93, 0.05); color: var(--accent-main); border-radius: 50%; margin-bottom: 1.5rem;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </div>
+                    <h2 class="editorial-heading" style="margin-bottom: 1rem; font-size: 2.25rem;">TRACE A LOT</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem; max-width: 500px; margin-inline: auto;">Enter a Lot or Batch Reference to view the complete journey from ocean to table. (Try <strong style="color: var(--text-primary);">TT-2026-001</strong>)</p>
+                    
+                    <form class="trace-search-form" style="display: flex; gap: 0.5rem; max-width: 500px; margin-inline: auto; position: relative; background: var(--bg-secondary); padding: 0.5rem; border-radius: 100px; margin-bottom: 2rem; border: 1px solid var(--border-color); box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);">
+                        <input type="text" placeholder="e.g. TT-2026-001" style="flex: 1; border: none; background: transparent; padding-inline: 1.5rem; outline: none; font-family: var(--font-body); font-size: 1rem; color: var(--text-primary); width: 100%;">
+                        <button type="submit" class="btn btn-primary" style="border-radius: 100px; padding: 0.75rem 2rem; white-space: nowrap; margin: 0;">Track Order</button>
+                    </form>
+                    
+                    <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        FRONTEND DEMO ONLY. IF SUBMITTED, DISPLAY AN ILLUSTRATIVE RECORD BELOW.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 04 - DATA VISUALIZATION (DEMO) -->
+        <section class="section-padding">
+            <div class="container reveal">
+                <div style="background-color: var(--card-bg); border-radius: var(--radius-lg); border: 1px solid var(--border-color); padding: 3rem; box-shadow: var(--shadow-sm);">
+                    <div class="trace-record-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem;">
+                        <div>
+                            <h3 style="font-family: var(--font-heading); margin-bottom: 0.25rem;">DEMO TRACEABILITY RECORD</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Lot ID: TT-2026-001</p>
+                        </div>
+                        <span style="background-color: var(--bg-secondary); padding: 0.5rem 1rem; border-radius: 100px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">STATUS: COMPLETED</span>
+                    </div>
+
+                    <div class="grid-2" style="gap: 3rem;">
+                        <div>
+                            <div style="margin-bottom: 2rem;">
+                                <div style="font-size: 0.8rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 0.5rem;">Origin Information</div>
+                                <div style="display: grid; grid-template-columns: 100px 1fr; gap: 1rem; font-size: 0.95rem;">
+                                    <span style="color: var(--text-secondary);">Source:</span>
+                                    <span style="font-weight: 500;">North Atlantic</span>
+                                    <span style="color: var(--text-secondary);">Method:</span>
+                                    <span style="font-weight: 500;">Responsible Line Caught</span>
+                                    <span style="color: var(--text-secondary);">Vessel:</span>
+                                    <span style="font-weight: 500;">FV Aurora (Example)</span>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 2rem;">
+                                <div style="font-size: 0.8rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 0.5rem;">Cold Chain Data</div>
+                                <div style="display: grid; grid-template-columns: 100px 1fr; gap: 1rem; font-size: 0.95rem;">
+                                    <span style="color: var(--text-secondary);">Harvest:</span>
+                                    <span style="font-weight: 500;">Chilled to 2°C within 1hr</span>
+                                    <span style="color: var(--text-secondary);">Transit:</span>
+                                    <span style="font-weight: 500;">Maintained &lt; 4°C</span>
+                                    <span style="color: var(--text-secondary);">Arrival:</span>
+                                    <span style="font-weight: 500;">Confirmed 3.1°C</span>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 2rem;">
+                                <div style="font-size: 0.8rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 0.5rem;">Processing & Certifications</div>
+                                <div style="display: grid; grid-template-columns: 100px 1fr; gap: 1rem; font-size: 0.95rem;">
+                                    <span style="color: var(--text-secondary);">Facility:</span>
+                                    <span style="font-weight: 500;">HACCP Certified, Grade A</span>
+                                    <span style="color: var(--text-secondary);">Format:</span>
+                                    <span style="font-weight: 500;">Whole Round, Head-on</span>
+                                    <span style="color: var(--text-secondary);">Standard:</span>
+                                    <span style="font-weight: 500;">MSC Sustainable Verified</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div style="font-size: 0.8rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 0.5rem;">Quality Inspection</div>
+                                <div style="display: grid; grid-template-columns: 100px 1fr; gap: 1rem; font-size: 0.95rem;">
+                                    <span style="color: var(--text-secondary);">Inspector:</span>
+                                    <span style="font-weight: 500;">QC Team Alpha, ID #4492</span>
+                                    <span style="color: var(--text-secondary);">Grade:</span>
+                                    <span style="font-weight: 500;">Premium Sashimi Grade</span>
+                                    <span style="color: var(--text-secondary);">Status:</span>
+                                    <span style="font-weight: 500; color: #2e7d32;">Cleared for Dispatch</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="border-radius: var(--radius-md); overflow: hidden; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; position: relative;">
+                            <img src="assets/images/DEMO TRACEABILITY RECORD.png" alt="Cold chain data representation" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+                            <div style="position: absolute; text-align: center; background: rgba(0,0,0,0.7); padding: 1.5rem; border-radius: var(--radius-sm); color: #fff;">
+                                <div style="font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700; margin-bottom: 0.25rem;">3.1°C</div>
+                                <div style="font-size: 0.85rem; letter-spacing: 0.05em;">FINAL LOGGED TEMP</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 05 - CTA -->
+        <section class="section-padding" style="background-color: var(--accent-main); color: var(--c-sand); text-align: center; position: relative; overflow: hidden;">
+            <!-- Subtle patterned background overlay -->
+            <div style="position: absolute; inset: 0; opacity: 0.1; background-image: radial-gradient(circle at 2px 2px, #ffffff 1px, transparent 0); background-size: 32px 32px;"></div>
+            
+            <div class="container reveal relative z-10" style="max-width: 900px; padding: 4rem 0;">
+                <h2 class="editorial-heading" style="color: var(--c-sand); font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.1;">WANT TO DISCUSS TRACEABILITY FOR YOUR BUSINESS?</h2>
+                <p style="font-size: 1.2rem; opacity: 0.8; margin-bottom: 3.5rem; font-family: var(--font-body); max-width: 600px; margin-inline: auto; font-weight: 300;">Our team is ready to help you integrate complete seafood transparency into your operations. Partner with us today.</p>
+                <a href="#" class="btn" style="background-color: var(--c-sand); color: var(--accent-main); border: none; padding: 1rem 3rem; font-size: 1.1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; border-radius: 100px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: inline-block;" data-modal-target="wholesale-modal">TALK TO OUR TEAM</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- GLOBAL WHOLESALE POPUP -->
+    <div class="modal-overlay" id="wholesale-modal">
+        <div class="modal-container">
+            <button class="modal-close" data-modal-close aria-label="Close modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            
+            <div class="modal-header">
+                <h3 class="editorial-heading" style="font-size: 2rem; margin-bottom: 0.5rem;">LET'S TALK SEAFOOD</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Submit your enquiry and our team will get in touch.</p>
+            </div>
+            
+            <form>
+                <div class="grid-2" style="gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Business Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                </div>
+                
+                <div class="grid-2" style="gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone</label>
+                        <input type="tel" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="grid-2" style="gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label">Enquiry Type</label>
+                        <select class="form-control form-select" required>
+                            <option value="">Select option...</option>
+                            <option>Wholesale Order</option>
+                            <option>Product Information</option>
+                            <option>Traceability</option>
+                            <option>General Enquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Business Type</label>
+                        <select class="form-control form-select" required>
+                            <option value="">Select option...</option>
+                            <option>Restaurant</option>
+                            <option>Hotel</option>
+                            <option>Retail</option>
+                            <option>Distributor</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" required></textarea>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary" style="flex: 1;">Send Enquiry</button>
+                    <button type="button" class="btn btn-secondary" data-modal-close>Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="nav-logo" style="margin-bottom: 1.5rem;">
+                        <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
+    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+</svg>
+                        <div>
+                            <div class="nav-logo-text" style="font-size: 1rem;">TIDE & TRACE</div>
+                            <div class="nav-logo-desc" style="font-size: 0.6rem;">Sustainable Seafood</div>
+                        </div>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 250px;">Premium sustainable seafood supplier serving hospitality businesses with transparency.</p>
+                    
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="X">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">EXPLORE</h4>
+                    <nav class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="home-2.html">Home 2</a>
+                        <a href="about.html">About</a>
+                        <a href="products.html">Products</a>
+                    </nav>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">SUPPLY</h4>
+                    <nav class="footer-links">
+                        <a href="traceability.html">Traceability</a>
+                        <a href="wholesale.html">Wholesale Orders</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">OCEAN NOTES & SUPPLY UPDATES</h4>
+                    <form style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <input type="email" class="form-control" placeholder="Email Address" required style="background: transparent; border-color: rgba(128,128,128,0.3);">
+                        <button type="submit" class="btn btn-secondary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div>&copy; 2026 Tide & Trace. Fictional demo placeholder.</div>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
