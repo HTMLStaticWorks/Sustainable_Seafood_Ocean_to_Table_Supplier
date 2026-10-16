@@ -143,6 +143,84 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetId = trigger.getAttribute('data-modal-target');
       const modal = document.getElementById(targetId);
       if (modal) {
+        if (targetId === 'species-modal') {
+          const card = trigger.closest('.product-card');
+          if (card) {
+            const cardImg = card.querySelector('.product-img-wrapper img');
+            const cardBadge = card.querySelector('.product-badge');
+            const cardTitle = card.querySelector('.product-title');
+            const cardDesc = card.querySelector('.product-desc');
+
+            const modalImg = document.getElementById('modal-species-img');
+            const modalBadge = document.getElementById('modal-species-badge');
+            const modalTitle = document.getElementById('modal-species-title');
+            const modalSource = document.getElementById('modal-species-source');
+            const modalMethod = document.getElementById('modal-species-method');
+            const modalSeason = document.getElementById('modal-species-season');
+            const modalDesc = document.getElementById('modal-species-desc');
+            const modalSize = document.getElementById('modal-species-size');
+            const modalCuts = document.getElementById('modal-species-cuts');
+            const modalPrice = document.getElementById('modal-species-price');
+            const modalMoq = document.getElementById('modal-species-moq');
+
+            if (cardImg && modalImg) {
+              modalImg.src = cardImg.getAttribute('src');
+              modalImg.alt = cardImg.getAttribute('alt') || 'Seafood Species';
+            }
+            if (cardBadge && modalBadge) {
+              modalBadge.textContent = cardBadge.textContent;
+            }
+            if (cardTitle && modalTitle) {
+              modalTitle.textContent = cardTitle.textContent;
+            }
+            if (cardDesc && modalDesc) {
+              modalDesc.textContent = cardDesc.textContent;
+            }
+            if (card.dataset.source && modalSource) modalSource.textContent = card.dataset.source;
+            if (card.dataset.method && modalMethod) modalMethod.textContent = card.dataset.method;
+            if (card.dataset.season && modalSeason) modalSeason.textContent = card.dataset.season;
+            if (card.dataset.size && modalSize) modalSize.textContent = card.dataset.size;
+            if (card.dataset.cuts && modalCuts) modalCuts.textContent = card.dataset.cuts;
+            if (card.dataset.price && modalPrice) modalPrice.textContent = card.dataset.price;
+            if (card.dataset.moq && modalMoq) modalMoq.textContent = card.dataset.moq;
+          }
+        } else if (targetId === 'wholesale-modal') {
+          // Check if triggered from a product card or species modal
+          const card = trigger.closest('.product-card');
+          const isFromSpeciesModal = trigger.closest('#species-modal');
+          let speciesName = '';
+          let speciesPrice = '';
+          let speciesSize = '';
+          let speciesMoq = '';
+
+          if (card) {
+            speciesName = card.querySelector('.product-title')?.textContent.trim() || '';
+            speciesPrice = card.dataset.price || card.querySelector('.price-amount')?.textContent.trim() || '';
+            speciesSize = card.dataset.size || '';
+            speciesMoq = card.dataset.moq || '';
+          } else if (isFromSpeciesModal) {
+            speciesName = document.getElementById('modal-species-title')?.textContent.trim() || '';
+            speciesPrice = document.getElementById('modal-species-price')?.textContent.trim() || '';
+            speciesSize = document.getElementById('modal-species-size')?.textContent.trim() || '';
+            speciesMoq = document.getElementById('modal-species-moq')?.textContent.trim() || '';
+          }
+
+          if (speciesName) {
+            const messageField = modal.querySelector('textarea');
+            const enquirySelect = modal.querySelector('select');
+            if (enquirySelect) {
+              for (let i = 0; i < enquirySelect.options.length; i++) {
+                if (enquirySelect.options[i].text.toLowerCase().includes('wholesale')) {
+                  enquirySelect.selectedIndex = i;
+                  break;
+                }
+              }
+            }
+            if (messageField) {
+              messageField.value = `Wholesale Purchasing Order:\n- Species: ${speciesName}\n- Quoted Rate: ${speciesPrice}\n- Calibration / Size: ${speciesSize}\n- Minimum Packaging: ${speciesMoq}\n\nPlease confirm availability, logistics dispatch date, and volume delivery quote.`;
+            }
+          }
+        }
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
@@ -206,6 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const speciesTitle = document.getElementById('species-explorer-title');
   const speciesDesc = document.getElementById('species-explorer-desc');
   const speciesSource = document.getElementById('species-explorer-source');
+  const speciesTags = document.getElementById('species-explorer-tags');
   
   if (speciesBtns.length > 0 && speciesImage) {
     speciesBtns.forEach(btn => {
@@ -220,6 +299,14 @@ document.addEventListener('DOMContentLoaded', () => {
           speciesTitle.textContent = btn.getAttribute('data-title');
           speciesDesc.textContent = btn.getAttribute('data-desc');
           speciesSource.textContent = btn.getAttribute('data-source');
+          
+          const tags = btn.getAttribute('data-tags');
+          if (tags && speciesTags) {
+            speciesTags.innerHTML = tags.split(',').map(tag => 
+              `<span style="font-size: 0.75rem; background: var(--bg-primary); padding: 0.3rem 0.75rem; border-radius: 100px; border: 1px solid var(--border-color); font-weight: 600;">${tag.trim()}</span>`
+            ).join('');
+          }
+          
           speciesImage.style.opacity = 1;
         }, 300);
       });

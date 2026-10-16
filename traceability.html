@@ -17,11 +17,11 @@
         <div class="container nav-container">
             <a href="index.html" class="nav-logo">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
-    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
-    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+    <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="logo-frame" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="currentColor" class="logo-fish" />
+    <polygon points="63,35 75,25 72,35 75,45" fill="currentColor" class="logo-fish" />
 </svg>
                 <div>
                     <div class="nav-logo-text">TIDE & TRACE</div>
@@ -93,35 +93,35 @@
             </div>
             <div class="hero-overlay" style="background: rgba(7, 59, 76, 0.85);"></div>
             <div class="container relative z-10 text-center reveal">
-                <h1 class="editorial-heading" style="color: var(--c-sand); margin-bottom: 1.5rem;">KNOW THE JOURNEY BEHIND YOUR SEAFOOD.</h1>
-                <p style="color: rgba(244, 239, 230, 0.8); font-size: 1.1rem; max-width: 600px; margin-inline: auto;">Our transparent systems allow you to track the origin, method, and handling of our premium supply.</p>
+                <h1 class="editorial-heading" style="color: var(--c-sand); margin-bottom: 1.5rem;">OCEAN-TO-TABLE TRACEABILITY & VERIFIED PROVENANCE</h1>
+                <p style="color: rgba(244, 239, 230, 0.85); font-size: 1.15rem; max-width: 650px; margin-inline: auto;">Our transparent digital systems allow chefs and conscious consumers to verify the exact vessel, catch coordinates, at-sea slush chilling, and continuous cold-chain integrity of every lot.</p>
             </div>
         </section>
 
         <!-- NEW SECTION 02A - WHY TRACEABILITY MATTERS -->
-        <section class="section-padding" style="background-color: var(--bg-secondary);">
+        <section class="section-padding" id="sourcing-practices" style="background-color: var(--bg-secondary);">
             <div class="container reveal">
-                <div class="grid-2 traceability-hero-grid" style="gap: 4rem;">
+                <div class="grid-2 traceability-hero-grid" style="gap: 4rem; align-items: center;">
                     
                     <!-- Left: Large Quote -->
                     <div class="traceability-quote-col">
-                        <h2 class="editorial-heading" style="font-size: 2.5rem; margin-bottom: 2rem;">WHY TRACEABILITY MATTERS</h2>
+                        <h2 class="editorial-heading" style="font-size: 2.5rem; margin-bottom: 2rem;">WHY OCEAN-TO-TABLE TRACEABILITY MATTERS</h2>
                         <div style="position: relative;">
-                            <p style="font-size: 1.75rem; color: var(--text-primary); font-family: var(--font-editorial); line-height: 1.5; position: relative; z-index: 1; font-style: italic;">
-                                In an industry historically plagued by opacity, we believe that true sustainability is impossible without total transparency.
+                            <p style="font-size: 1.6rem; color: var(--text-primary); font-family: var(--font-editorial); line-height: 1.5; position: relative; z-index: 1; font-style: italic;">
+                                In an industry historically burdened by opacity and mislabeling, we believe that true sustainability and culinary excellence are impossible without total provenance.
                             </p>
                         </div>
                     </div>
 
                     <!-- Right: Stacked Points -->
-                    <div style="display: flex; flex-direction: column; gap: 3rem;">
+                    <div style="display: flex; flex-direction: column; gap: 2.5rem;">
                         <div class="icon-feature-row">
                             <div style="width: 48px; height: 48px; flex-shrink: 0; background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent-main); box-shadow: var(--shadow-sm);">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                             </div>
                             <div>
-                                <h4 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text-primary);">Eliminating Seafood Fraud</h4>
-                                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 1rem;">Mislabeling is a persistent issue in global seafood supply. By implementing end-to-end tracking, we guarantee that the species you order is exactly what arrives at your kitchen.</p>
+                                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">Eliminating Seafood Fraud & Species Substitution</h4>
+                                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">Global seafood supply suffers from widespread species substitution. By logging verifiable DNA and lot data at landing, we guarantee that the fish on your menu is exactly what you ordered.</p>
                             </div>
                         </div>
 
@@ -130,8 +130,18 @@
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                             </div>
                             <div>
-                                <h4 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text-primary);">Empowering Responsible Fishers</h4>
-                                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 1rem;">Traceability isn't just about data; it's about people. Our systems ensure that the premium paid for responsibly sourced seafood goes directly back to the coastal communities.</p>
+                                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">Empowering Responsible Coastal Fishers</h4>
+                                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">Traceability celebrates the people behind the catch. Our systems ensure that the premium paid for selective, low-impact seafood flows directly back to independent fishing families.</p>
+                            </div>
+                        </div>
+
+                        <div class="icon-feature-row">
+                            <div style="width: 48px; height: 48px; flex-shrink: 0; background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent-main); box-shadow: var(--shadow-sm);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/><path d="M12 7v5"/></svg>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">Verifying Cold-Chain Freshness & Safety</h4>
+                                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">Live temperature logs from ship hold to walk-in cooler provide indisputable evidence of unbroken 0°C–2°C cold-chain discipline, ensuring peak sashimi quality and extended shelf life.</p>
                             </div>
                         </div>
                     </div>
@@ -144,8 +154,8 @@
         <section class="section-padding">
             <div class="container reveal">
                 <div class="text-center" style="margin-bottom: 4rem;">
-                    <h2>OUR TRACKING TECHNOLOGY</h2>
-                    <p style="color: var(--text-secondary);">The modern tools we use to maintain unbroken visibility.</p>
+                    <h2>OUR OCEAN-TO-TABLE TRACKING TECHNOLOGY</h2>
+                    <p style="color: var(--text-secondary); max-width: 650px; margin-inline: auto;">The modern digital tools we use to maintain unbroken cold-chain and origin visibility at every step.</p>
                 </div>
                 
                 <div class="grid-4 text-center">
@@ -154,28 +164,28 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         </div>
                         <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Digital Catch Records</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Logged at sea or pond-side via satellite-linked tablets.</p>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Logged at sea via satellite-linked tablets with GPS coordinates and vessel ID.</p>
                     </div>
                     <div>
                         <div style="width: 48px; height: 48px; margin: 0 auto 1.5rem; color: var(--accent-main);">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><rect x="7" y="7" width="3" height="3"/><rect x="14" y="7" width="3" height="3"/><rect x="7" y="14" width="3" height="3"/><rect x="14" y="14" width="3" height="3"/></svg>
                         </div>
                         <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Unique QR Lots</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Every batch receives a unique identifier that follows it to delivery.</p>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Every crate receives a scannable QR code carrying complete harvest and origin data.</p>
                     </div>
                     <div>
                         <div style="width: 48px; height: 48px; margin: 0 auto 1.5rem; color: var(--accent-main);">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
                         </div>
                         <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">IoT Temp Loggers</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Continuous temperature monitoring during transit and storage.</p>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Continuous real-time sub-zero temperature monitoring during air and ground freight.</p>
                     </div>
                     <div>
                         <div style="width: 48px; height: 48px; margin: 0 auto 1.5rem; color: var(--accent-main);">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
                         </div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Cloud Sync</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Data is immediately available to you upon receipt of goods.</p>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem;">Instant Cloud Verification</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Chefs and consumers instantly access complete provenance upon crate delivery.</p>
                     </div>
                 </div>
             </div>
@@ -211,68 +221,70 @@
                 <div style="background-color: var(--card-bg); border-radius: var(--radius-lg); border: 1px solid var(--border-color); padding: 3rem; box-shadow: var(--shadow-sm);">
                     <div class="trace-record-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem;">
                         <div>
-                            <h3 style="font-family: var(--font-heading); margin-bottom: 0.25rem;">DEMO TRACEABILITY RECORD</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Lot ID: TT-2026-001</p>
+                            <h3 style="font-family: var(--font-heading); margin-bottom: 0.25rem;">VERIFIED LOT LOG: PROVENANCE, COLD CHAIN & QUALITY</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Lot ID: TT-2026-001 (Alaskan King Salmon / Wild Capture)</p>
                         </div>
-                        <span style="background-color: var(--bg-secondary); padding: 0.5rem 1rem; border-radius: 100px; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">STATUS: COMPLETED</span>
+                        <span style="background-color: var(--bg-secondary); padding: 0.5rem 1rem; border-radius: 100px; font-size: 0.85rem; font-weight: 600; white-space: nowrap; color: var(--accent-main); border: 1px solid var(--border-color);">VERIFIED COLD CHAIN</span>
                     </div>
 
                     <div class="grid-2" style="gap: 3rem;">
                         <div>
                             <div style="margin-bottom: 2rem;">
-                                <div style="font-size: 0.8rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 0.5rem;">Origin Information</div>
-                                <div style="display: grid; grid-template-columns: 100px 1fr; gap: 1rem; font-size: 0.95rem;">
+                                <div style="font-size: 0.8rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 0.5rem;">Harvest & Origin Provenance</div>
+                                <div style="display: grid; grid-template-columns: 110px 1fr; gap: 1rem; font-size: 0.95rem;">
                                     <span style="color: var(--text-secondary);">Source:</span>
-                                    <span style="font-weight: 500;">North Atlantic</span>
+                                    <span style="font-weight: 500;">North Pacific (Gulf of Alaska)</span>
                                     <span style="color: var(--text-secondary);">Method:</span>
-                                    <span style="font-weight: 500;">Responsible Line Caught</span>
+                                    <span style="font-weight: 500;">Artisanal Single Hook-and-Line</span>
                                     <span style="color: var(--text-secondary);">Vessel:</span>
-                                    <span style="font-weight: 500;">FV Aurora (Example)</span>
+                                    <span style="font-weight: 500;">FV North Star (Reg #MSC-9021)</span>
+                                    <span style="color: var(--text-secondary);">Coordinates:</span>
+                                    <span style="font-weight: 500;">58°22'N, 149°18'W</span>
                                 </div>
                             </div>
                             
                             <div style="margin-bottom: 2rem;">
-                                <div style="font-size: 0.8rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 0.5rem;">Cold Chain Data</div>
-                                <div style="display: grid; grid-template-columns: 100px 1fr; gap: 1rem; font-size: 0.95rem;">
-                                    <span style="color: var(--text-secondary);">Harvest:</span>
-                                    <span style="font-weight: 500;">Chilled to 2°C within 1hr</span>
-                                    <span style="color: var(--text-secondary);">Transit:</span>
-                                    <span style="font-weight: 500;">Maintained &lt; 4°C</span>
-                                    <span style="color: var(--text-secondary);">Arrival:</span>
-                                    <span style="font-weight: 500;">Confirmed 3.1°C</span>
+                                <div style="font-size: 0.8rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 0.5rem;">Cold Chain Log (IoT Monitored)</div>
+                                <div style="display: grid; grid-template-columns: 110px 1fr; gap: 1rem; font-size: 0.95rem;">
+                                    <span style="color: var(--text-secondary);">At-Sea Chill:</span>
+                                    <span style="font-weight: 500;">0.8°C slush-ice within 15 min</span>
+                                    <span style="color: var(--text-secondary);">In-Transit:</span>
+                                    <span style="font-weight: 500;">Continuous 0°C–2°C Sensor Log</span>
+                                    <span style="color: var(--text-secondary);">Arrival Temp:</span>
+                                    <span style="font-weight: 500;">Confirmed 1.4°C Walk-in Delivery</span>
                                 </div>
                             </div>
 
                             <div style="margin-bottom: 2rem;">
                                 <div style="font-size: 0.8rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 0.5rem;">Processing & Certifications</div>
-                                <div style="display: grid; grid-template-columns: 100px 1fr; gap: 1rem; font-size: 0.95rem;">
+                                <div style="display: grid; grid-template-columns: 110px 1fr; gap: 1rem; font-size: 0.95rem;">
                                     <span style="color: var(--text-secondary);">Facility:</span>
-                                    <span style="font-weight: 500;">HACCP Certified, Grade A</span>
+                                    <span style="font-weight: 500;">HACCP Grade-A Coastal Hub</span>
                                     <span style="color: var(--text-secondary);">Format:</span>
-                                    <span style="font-weight: 500;">Whole Round, Head-on</span>
+                                    <span style="font-weight: 500;">Whole Round, Gutted & Scaled</span>
                                     <span style="color: var(--text-secondary);">Standard:</span>
-                                    <span style="font-weight: 500;">MSC Sustainable Verified</span>
+                                    <span style="font-weight: 500;">MSC Certified Sustainable</span>
                                 </div>
                             </div>
 
                             <div>
                                 <div style="font-size: 0.8rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 0.5rem;">Quality Inspection</div>
-                                <div style="display: grid; grid-template-columns: 100px 1fr; gap: 1rem; font-size: 0.95rem;">
+                                <div style="display: grid; grid-template-columns: 110px 1fr; gap: 1rem; font-size: 0.95rem;">
                                     <span style="color: var(--text-secondary);">Inspector:</span>
-                                    <span style="font-weight: 500;">QC Team Alpha, ID #4492</span>
+                                    <span style="font-weight: 500;">QC Master Fishmonger #4492</span>
                                     <span style="color: var(--text-secondary);">Grade:</span>
-                                    <span style="font-weight: 500;">Premium Sashimi Grade</span>
+                                    <span style="font-weight: 500;">Premium Sashimi Grade A+</span>
                                     <span style="color: var(--text-secondary);">Status:</span>
-                                    <span style="font-weight: 500; color: #2e7d32;">Cleared for Dispatch</span>
+                                    <span style="font-weight: 600; color: var(--accent-main);">Cleared for Direct Kitchen Delivery</span>
                                 </div>
                             </div>
                         </div>
                         
-                        <div style="border-radius: var(--radius-md); overflow: hidden; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; position: relative;">
-                            <img src="assets/images/DEMO TRACEABILITY RECORD.png" alt="Cold chain data representation" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
-                            <div style="position: absolute; text-align: center; background: rgba(0,0,0,0.7); padding: 1.5rem; border-radius: var(--radius-sm); color: #fff;">
-                                <div style="font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700; margin-bottom: 0.25rem;">3.1°C</div>
-                                <div style="font-size: 0.85rem; letter-spacing: 0.05em;">FINAL LOGGED TEMP</div>
+                        <div style="border-radius: var(--radius-md); overflow: hidden; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; position: relative; min-height: 480px;">
+                            <img src="assets/images/DEMO TRACEABILITY RECORD.png" alt="Digital Traceability Product Passport on Mobile and Tablet Devices" style="width: 100%; height: 100%; object-fit: contain; padding: 1.5rem; display: block;">
+                            <div style="position: absolute; bottom: 1.5rem; right: 1.5rem; text-align: center; background: rgba(7, 59, 76, 0.92); backdrop-filter: blur(8px); padding: 1rem 1.5rem; border-radius: var(--radius-md); color: #fff; border: 1px solid rgba(255,255,255,0.2); box-shadow: var(--shadow-md);">
+                                <div style="font-size: 2rem; font-family: var(--font-heading); font-weight: 700; margin-bottom: 0.15rem; color: var(--c-tidal-blue);">1.4°C</div>
+                                <div style="font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600;">VERIFIED ARRIVAL TEMP</div>
                             </div>
                         </div>
                     </div>
@@ -371,11 +383,11 @@
                 <div>
                     <div class="nav-logo" style="margin-bottom: 1.5rem;">
                         <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
-    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
-    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+    <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="logo-frame" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="currentColor" class="logo-fish" />
+    <polygon points="63,35 75,25 72,35 75,45" fill="currentColor" class="logo-fish" />
 </svg>
                         <div>
                             <div class="nav-logo-text" style="font-size: 1rem;">TIDE & TRACE</div>

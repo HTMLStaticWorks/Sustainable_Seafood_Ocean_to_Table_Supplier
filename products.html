@@ -17,11 +17,11 @@
         <div class="container nav-container">
             <a href="index.html" class="nav-logo">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
-    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
-    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+    <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="logo-frame" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="currentColor" class="logo-fish" />
+    <polygon points="63,35 75,25 72,35 75,45" fill="currentColor" class="logo-fish" />
 </svg>
                 <div>
                     <div class="nav-logo-text">TIDE & TRACE</div>
@@ -93,7 +93,8 @@
             </div>
             <div class="hero-overlay" style="background: rgba(7, 59, 76, 0.75);"></div>
             <div class="container relative z-10 text-center reveal">
-                <h1 class="editorial-heading" style="color: var(--c-sand);">SEAFOOD SELECTED WITH PURPOSE.</h1>
+                <h1 class="editorial-heading" style="color: var(--c-sand); margin-bottom: 1.5rem;">OUR SEAFOOD VARIETIES & QUALITY STANDARDS</h1>
+                <p style="color: rgba(244, 239, 230, 0.9); font-size: 1.15rem; max-width: 700px; margin-inline: auto;">Explore our curated selection of wild-caught and sustainably farmed finfish and shellfish, harvested with integrity and held to the highest sashimi-grade freshness standards.</p>
             </div>
         </section>
 
@@ -115,287 +116,897 @@
         <!-- SECTION 03 - PRODUCT CATALOGUE -->
         <section class="section-padding" style="padding-top: 0;">
             <div class="container">
+                <div class="text-center reveal" style="margin-bottom: 3.5rem;">
+                    <h2>SEAFOOD VARIETIES: FINFISH & CRUSTACEANS</h2>
+                    <p style="color: var(--text-secondary); max-width: 650px; margin-inline: auto;">Select any category above to view our seasonal wild capture and responsibly farmed species.</p>
+                </div>
                 <div class="grid-3" id="product-grid">
                     
                     <!-- Salmon -->
-                    <div class="product-card" data-category="salmon">
+                    <div class="product-card" data-category="salmon" data-source="North Atlantic (Norway)" data-method="Low-Density Ocean Pens · Slush-Ice Bled" data-season="Year-round Availability" data-size="3.5 – 5.0 kg whole / 1.8 – 2.4 kg fillets" data-cuts="Whole G&S · Trim D Skin-On · Portions (180g)" data-price="$22.50 / kg" data-moq="1 Master Case (10 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/species-salmon.webp" alt="Atlantic Salmon">
+                            <img src="assets/images/species-salmon.webp" alt="Atlantic Salmon" loading="lazy">
                             <span class="product-badge">Aquaculture</span>
+                            <span class="product-grade-badge">Sashimi Grade A+</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Atlantic Salmon</h3>
-                            <p class="product-desc">Rich, buttery texture with deep color. Farmed using advanced practices.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">North Atlantic</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Year-round</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Atlantic Salmon</h3>
+                                <span class="product-scientific">Salmo salar · Certified ASC</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">High-omega fat content with deep coral marbling and silky mouthfeel. Superior grade for raw crudo or pan-searing.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">3.5 – 5.0 kg whole / 1.8 – 2.4 kg fillets</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Whole G&S · Trim D Skin-On · Portions</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">North Atlantic · Low-Density Ocean Pens</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Master Case (10 kg) · Year-round</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$22.50</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $225 / 10 kg case</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-card" data-category="salmon">
+
+                    <div class="product-card" data-category="salmon" data-source="Pacific Northwest (Haida Gwaii)" data-method="Hook-and-Line Trolling · Hand-Handled" data-season="Summer Peak (May – Sept)" data-size="5.0 – 8.0 kg whole / 2.2 – 3.6 kg fillets" data-cuts="Whole Round · Head-Off Gutted · Center-Cut Portions" data-price="$34.00 / kg" data-moq="1 Crate (12 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/Pacific King Salmon.png" alt="Pacific King Salmon">
+                            <img src="assets/images/Pacific King Salmon.png" alt="Pacific King Salmon" loading="lazy">
                             <span class="product-badge">Wild Capture</span>
+                            <span class="product-grade-badge">Wild Chinook #1</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Pacific King Salmon</h3>
-                            <p class="product-desc">The highest oil content of all wild salmon. Incredibly rich flavor.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Pacific Northwest</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Summer</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Pacific King Salmon</h3>
+                                <span class="product-scientific">Oncorhynchus tshawytscha · Trolled</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">The undisputed king of wild salmon with the highest natural oil content, velvety texture, and rich, savoury flavour.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">5.0 – 8.0 kg whole / 2.2 – 3.6 kg fillets</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Whole Round · Head-Off Gutted · Portions</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">Pacific Northwest · Hook-and-Line Troll</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Crate (12 kg) · Summer Peak</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$34.00</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $408 / 12 kg case</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-card" data-category="salmon">
+
+                    <div class="product-card" data-category="salmon" data-source="Bristol Bay, Alaska" data-method="Drift Net Sustainable Fishery · Vessel Chilled" data-season="Summer / Fall (Fresh June–Aug, IQF Year-round)" data-size="2.0 – 3.2 kg whole / 0.9 – 1.4 kg fillets" data-cuts="Whole G&S · Skin-On Pin-Bone-Out Fillets" data-price="$26.80 / kg" data-moq="1 Master Case (10 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/Sockeye Salmon.png" alt="Sockeye Salmon">
+                            <img src="assets/images/Sockeye Salmon.png" alt="Sockeye Salmon" loading="lazy">
                             <span class="product-badge">Wild Capture</span>
+                            <span class="product-grade-badge">MSC Certified</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Sockeye Salmon</h3>
-                            <p class="product-desc">Vibrant red flesh and robust flavor. Perfect for smoking or grilling.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Alaska</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Summer/Fall</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Sockeye Salmon</h3>
+                                <span class="product-scientific">Oncorhynchus nerka · Wild Alaska</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">Naturally brilliant ruby-red flesh with robust, mineral-rich flavour and firm texture. Holds shape superbly over wood fire.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">2.0 – 3.2 kg whole / 0.9 – 1.4 kg fillets</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Whole G&S · Skin-on Pin-Bone-Out Fillets</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">Bristol Bay, Alaska · Drift Net Fishery</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Master Case (10 kg) · Fresh &amp; IQF</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$26.80</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $268 / 10 kg case</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Tuna -->
-                    <div class="product-card" data-category="tuna">
+                    <div class="product-card" data-category="tuna" data-source="Western Central Pacific (FAO 71)" data-method="Handline & Pole-and-Line · -60°C Super-Frozen" data-season="Year-round Peak Availability" data-size="25 – 45 kg whole / 2.0 – 4.5 kg saku loins" data-cuts="AAA Saku Loins · Steaks (200g) · Whole Loins" data-price="$29.50 / kg" data-moq="1 Insulated Carton (10 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/Yellowfin Tuna.png" alt="Yellowfin Tuna">
+                            <img src="assets/images/Yellowfin Tuna.png" alt="Yellowfin Tuna" loading="lazy">
                             <span class="product-badge">Wild Capture</span>
+                            <span class="product-grade-badge">Sashimi Grade #1</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Yellowfin Tuna</h3>
-                            <p class="product-desc">Firm texture with deep red color, ideal for premium raw applications.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Pacific Ocean</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Summer/Fall</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Yellowfin Tuna</h3>
+                                <span class="product-scientific">Thunnus albacares · Line-Caught</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">Bright ruby-red translucent meat with lean, firm texture and clean mild taste. Precision-cut for sushi loins and carpaccio.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">25 – 45 kg whole / 2.0 – 4.5 kg loins</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">AAA Saku Loins · 200g Steaks · Blocks</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">Pacific (FAO 71) · Pole-and-Line Catch</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Insulated Carton (10 kg) · Super-Frozen</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$29.50</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $295 / 10 kg carton</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-card" data-category="tuna">
+
+                    <div class="product-card" data-category="tuna" data-source="North Atlantic Ocean" data-method="Selective Single-Hook Troll · Chilled Brine" data-season="Summer Season (June – Oct)" data-size="8.0 – 15.0 kg whole / 1.5 – 3.0 kg loins" data-cuts="Quarter Loins · Cross-Cut Steaks · Medallions" data-price="$21.00 / kg" data-moq="1 Master Case (12 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/Albacore Tuna.png" alt="Albacore Tuna">
+                            <img src="assets/images/Albacore Tuna.png" alt="Albacore Tuna" loading="lazy">
                             <span class="product-badge">Wild Capture</span>
+                            <span class="product-grade-badge">MSC Certified Pole</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Albacore Tuna</h3>
-                            <p class="product-desc">Lighter flesh with a milder flavor. Line-caught for sustainability.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">North Atlantic</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Summer</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Albacore Tuna</h3>
+                                <span class="product-scientific">Thunnus alalunga · North Atlantic</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">Pale pinkish-ivory flesh known as 'white tuna', delivering a mild delicate palate, dense steely flake, and superb canning/searing profile.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">8.0 – 15.0 kg whole / 1.5 – 3.0 kg loins</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Quarter Loins · Cross-Cut Steaks · Medallions</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">North Atlantic · Single-Hook Trolling</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Master Case (12 kg) · Summer Season</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$21.00</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $252 / 12 kg case</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-card" data-category="tuna">
+
+                    <div class="product-card" data-category="tuna" data-source="Mediterranean Sea (Croatia / Spain)" data-method="Strictly Quota-Managed Ranch · Super-Chilled -60°C" data-season="Winter Optimum (Oct – Feb)" data-size="Trunk portions / 1.0 – 3.0 kg block cuts" data-cuts="Otoro Belly · Chutoro Loin · Akami Block" data-price="$68.00 / kg" data-moq="1 Vacuum Pack Box (5 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/Bluefin Tuna.png" alt="Bluefin Tuna">
+                            <img src="assets/images/Bluefin Tuna.png" alt="Bluefin Tuna" loading="lazy">
                             <span class="product-badge">Aquaculture</span>
+                            <span class="product-grade-badge">Ultra-Premium Otoro</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Bluefin Tuna</h3>
-                            <p class="product-desc">Responsibly ranched to ensure consistent high fat content (Toro).</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Mediterranean</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Winter</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Bluefin Tuna</h3>
+                                <span class="product-scientific">Thunnus thynnus · Ranched Open Sea</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">World-class fat marbling with melt-in-mouth Otoro belly, Chutoro medium belly, and crimson Akami lean loin cuts.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">Trunk cuts / 1.0 – 3.0 kg saku loins</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Otoro Belly · Chutoro Loin · Akami</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">Mediterranean Sea · Quota-Ranched</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Vacuum Box (5 kg) · Super-Frozen</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$68.00</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $340 / 5 kg custom box</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Sea Bass -->
-                    <div class="product-card" data-category="sea-bass">
+                    <div class="product-card" data-category="sea-bass" data-source="Mediterranean & Bay of Biscay" data-method="Artisanal Handline · Onboard Slush Chilled" data-season="Spring & Summer Peak" data-size="400 – 600g & 800g – 1.2 kg whole / 180 – 240g fillets" data-cuts="Whole Scaled & Gutted · Butterfly · V-Bone Fillets" data-price="$25.40 / kg" data-moq="1 Polystyrene Crate (6 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/European Sea Bass.png" alt="European Sea Bass">
+                            <img src="assets/images/European Sea Bass.png" alt="European Sea Bass" loading="lazy">
                             <span class="product-badge">Wild Capture</span>
+                            <span class="product-grade-badge">Chef's Choice Daily</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">European Sea Bass</h3>
-                            <p class="product-desc">Flaky, delicate white meat. Sustainably caught using line methods.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Mediterranean</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Spring/Summer</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">European Sea Bass</h3>
+                                <span class="product-scientific">Dicentrarchus labrax · Line-Caught</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">Silvery, fine-scaled Mediterranean bass with tender, sweet white flakes and crisp-crackling skin capability.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">400–600g &amp; 800g–1.2kg / 180–240g fillets</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Whole Scaled &amp; Gutted · Butterfly Fillets</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">Mediterranean Sea · Artisanal Handline</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Polystyrene Crate (6 kg) · Fresh Daily</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$25.40</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $152.40 / 6 kg crate</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-card" data-category="sea-bass">
+
+                    <div class="product-card" data-category="sea-bass" data-source="Southern Ocean (Ross Sea / Heard Island)" data-method="Demersal Longline with Seabird Mitigators" data-season="Year-round Quota Availability" data-size="4.0 – 8.0 kg H&G / 1.5 – 2.5 kg skin-on fillets" data-cuts="H&G Trunk · Skin-On Fillets · Thick Portions (220g)" data-price="$46.50 / kg" data-moq="1 Master Case (10 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/Chilean Sea Bass.png" alt="Chilean Sea Bass">
+                            <img src="assets/images/Chilean Sea Bass.png" alt="Chilean Sea Bass" loading="lazy">
                             <span class="product-badge">Wild Capture</span>
+                            <span class="product-grade-badge">MSC Certified Toothfish</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Chilean Sea Bass</h3>
-                            <p class="product-desc">Incredibly rich and buttery. MSC certified from deep southern waters.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Southern Ocean</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Year-round</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Chilean Sea Bass</h3>
+                                <span class="product-scientific">Dissostichus eleginoides · Deep Sea</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">Legendary snow-white, thick-flaked meat brimming with natural oils. Remains incredibly succulent under high-heat roasting.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">4.0 – 8.0 kg H&amp;G / 1.5 – 2.5 kg fillets</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">H&amp;G Trunk · Skin-On Fillets · 220g Portions</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">Southern Ocean · Certified Longline</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Master Case (10 kg) · Quota Regulated</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$46.50</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $465 / 10 kg case</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-card" data-category="sea-bass">
+
+                    <div class="product-card" data-category="sea-bass" data-source="Mid-Atlantic Coastal Waters (USA)" data-method="Fish Pots & Hook-and-Line · Day-Boat Catch" data-season="Summer & Autumn (May – Nov)" data-size="700g – 1.5 kg whole / 200 – 350g butterfly fillets" data-cuts="Whole Round · Scaled & Gilled · Skin-On Fillets" data-price="$23.80 / kg" data-moq="1 Insulated Tote (8 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/Black Sea Bass.png" alt="Black Sea Bass">
+                            <img src="assets/images/Black Sea Bass.png" alt="Black Sea Bass" loading="lazy">
                             <span class="product-badge">Wild Capture</span>
+                            <span class="product-grade-badge">Day-Boat Landed</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Black Sea Bass</h3>
-                            <p class="product-desc">Firm, lean, and highly versatile for roasting or pan-searing.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Mid-Atlantic</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Summer</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Black Sea Bass</h3>
+                                <span class="product-scientific">Centropristis striata · Atlantic Coast</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">Firm, lean, small-flake white flesh with subtle sea-spray sweetness. Highly adaptable for whole-roasted or pan-crisped service.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">700g – 1.5 kg whole / 200 – 350g fillets</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Whole Round · Scaled &amp; Gilled · Fillets</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">Mid-Atlantic Waters · Day-Boat Pots</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Insulated Tote (8 kg) · Seasonal Fresh</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$23.80</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $190.40 / 8 kg tote</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Prawns -->
-                    <div class="product-card" data-category="prawns">
+                    <div class="product-card" data-category="prawns" data-source="Sustainable Coastal Farms (Ecuador)" data-method="Zero-Antibiotic Estuarine Ponds · Flash Frozen" data-season="Year-round Continuous Harvest" data-size="U/10 count (45–60g ea) · 16/20 count (25–30g ea)" data-cuts="Head-On Shell-On (HOSO) · Easy-Peel Butterfly · IQF" data-price="$24.00 / kg" data-moq="1 Master Carton (12 kg / 6x2kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/King Prawns.png" alt="King Prawns">
+                            <img src="assets/images/King Prawns.png" alt="King Prawns" loading="lazy">
                             <span class="product-badge">Aquaculture</span>
+                            <span class="product-grade-badge">GlobalG.A.P. Certified</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">King Prawns</h3>
-                            <p class="product-desc">Sweet, crisp texture. Harvested carefully to preserve natural sweetness.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Coastal Farms</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Year-round</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">King Prawns</h3>
+                                <span class="product-scientific">Litopenaeus vannamei · Mangrove Coast</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">Plump, crunchy texture with clean oceanic sweetness. Uniformly graded for banquet presentation, paellas, and grill skewers.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">U/10 count (45–60g) · 16/20 count (25–30g)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Head-On Shell-On · Easy-Peel Butterfly · IQF</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">Coastal Farms · Zero Antibiotic System</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Master Carton (12 kg) · Year-round</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$24.00</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $288 / 12 kg carton</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-card" data-category="prawns">
+
+                    <div class="product-card" data-category="prawns" data-source="Indo-Pacific Mangrove Farms (Vietnam)" data-method="BAP 4-Star Certified Silvofisheries" data-season="Year-round Availability" data-size="Colossal U/8 count (65g+ ea) · U/12 count (45g ea)" data-cuts="Whole Head-On · Peeled & Deveined Tail-On (PDTO)" data-price="$28.50 / kg" data-moq="1 Master Carton (10 x 1 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/Tiger Prawns.png" alt="Tiger Prawns">
+                            <img src="assets/images/Tiger Prawns.png" alt="Tiger Prawns" loading="lazy">
                             <span class="product-badge">Aquaculture</span>
+                            <span class="product-grade-badge">ASC Eco-Certified Jumbo</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Tiger Prawns</h3>
-                            <p class="product-desc">Large, impressive presentation with a pronounced, robust flavor.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Indo-Pacific</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Year-round</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Tiger Prawns</h3>
+                                <span class="product-scientific">Penaeus monodon · Indo-Pacific</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">Giant signature black-striped crustacean with dense meaty snap and rich shellfish umami. Unrivalled plate presentation.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">Colossal U/8 count (65g+) · U/12 count (45g)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Whole Head-On · Peeled &amp; Deveined (PDTO)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">Indo-Pacific · BAP 4-Star Silvofishery</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Master Case (10 x 1 kg) · Flash Frozen</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$28.50</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $285 / 10 kg case</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-card" data-category="prawns">
+
+                    <div class="product-card" data-category="prawns" data-source="North Pacific (Strait of Georgia, BC)" data-method="Baited Wire Traps · Zero Bycatch Trap System" data-season="Spring Peak (May – June Live, FAS Year-round)" data-size="12/15 count per lb (approx. 30–35 prawns/kg)" data-cuts="Live Tank Shipped · IQF Whole Frozen at Sea (FAS)" data-price="$48.00 / kg" data-moq="1 Live Insulated Box (5 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/Spot Prawns.png" alt="Spot Prawns">
+                            <img src="assets/images/Spot Prawns.png" alt="Spot Prawns" loading="lazy">
                             <span class="product-badge">Wild Capture</span>
+                            <span class="product-grade-badge">Live Tank / Sashimi #1</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Spot Prawns</h3>
-                            <p class="product-desc">Delicate and sweet, highly prized by chefs for raw preparations.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">North Pacific</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Spring</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Spot Prawns</h3>
+                                <span class="product-scientific">Pandalus platyceros · Pacific Coast</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">Prized for translucent sweet flesh and delicate caviar roe. The gold standard for raw sashimi and flash-broiled live prawns.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">12/15 count per lb (~30–35 prawns/kg)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Live Tank Oxygenated · Frozen At Sea (FAS)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">North Pacific Waters · Low-Impact Traps</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Live Insulated Box (5 kg) · Spring Peak</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$48.00</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $240 / 5 kg live tank box</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Crab -->
-                    <div class="product-card" data-category="crab">
+                    <div class="product-card" data-category="crab" data-source="Gulf of St. Lawrence & Bering Sea" data-method="Conical Crab Pots with Biodegradable Escape Panels" data-season="Winter / Spring Catch (IQF Year-round)" data-size="Sections 5L (280–340g) & 4L (225–280g cluster)" data-cuts="Cooked Section Clusters (Legs & Claw intact)" data-price="$32.00 / kg" data-moq="1 Master Case (13.6 kg / 30 lbs)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/Snow Crab.png" alt="Snow Crab">
+                            <img src="assets/images/Snow Crab.png" alt="Snow Crab" loading="lazy">
                             <span class="product-badge">Wild Capture</span>
+                            <span class="product-grade-badge">MSC Certified Sections</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Snow Crab</h3>
-                            <p class="product-desc">Delicate, sweet meat from strictly managed wild-capture fisheries.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">North Pacific</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Winter</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Snow Crab</h3>
+                                <span class="product-scientific">Chionoecetes opilio · Bering Sea</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">Sweet, tender white meat with gentle fibrous texture and delicate sea brine. Pre-cooked and brine-frozen for rapid thaw-and-serve.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">Clusters 5L (280–340g) &amp; 4L (225–280g)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Cooked Section Clusters · Snap-and-Eat</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">Gulf of St. Lawrence · Escape-Panel Pots</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Master Case (13.6 kg / 30 lbs) · IQF</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$32.00</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $435 / 13.6 kg case</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-card" data-category="crab">
+
+                    <div class="product-card" data-category="crab" data-source="Pacific Northwest (Oregon / Washington)" data-method="Standard Pot Fishery with Strict Shell Size Checks" data-season="Winter through Spring (Dec – April)" data-size="800g – 1.2 kg whole live / 450g meat tubs" data-cuts="Whole Live in Seawater Totes · Cooked Whole · Picked Meat" data-price="$27.50 / kg" data-moq="1 Live Crate (15 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/Dungeness Crab.png" alt="Dungeness Crab">
+                            <img src="assets/images/Dungeness Crab.png" alt="Dungeness Crab" loading="lazy">
                             <span class="product-badge">Wild Capture</span>
+                            <span class="product-grade-badge">Pacific Coast Live</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Dungeness Crab</h3>
-                            <p class="product-desc">Sweet and tender, caught using low-impact pots that protect the seabed.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">West Coast</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Winter/Spring</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Dungeness Crab</h3>
+                                <span class="product-scientific">Metacarcinus magister · Oregon Coast</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">Sweet, succulent leg meat with rich buttery body meat. Revered along the Pacific Coast for classic seafood boils and crab cakes.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">800g – 1.2 kg whole live / 450g meat tubs</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Whole Live · Cooked Whole · Fresh Meat</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">Pacific Northwest · Calibrated Pots</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Live Crate (15 kg) · Winter/Spring</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$27.50</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $412.50 / 15 kg live crate</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-card" data-category="crab">
+
+                    <div class="product-card" data-category="crab" data-source="Bristol Bay & Dutch Harbor, Alaska" data-method="Heavy Steel Mesh Pots · Quota Monitored" data-season="Autumn Quota Fishery (Nov – Jan)" data-size="Colossal 6/9 count (450–650g per leg) & 9/12 count" data-cuts="Cooked Whole Legs & Claws · Split Cut-and-Serve" data-price="$89.00 / kg" data-moq="1 Master Case (9.07 kg / 20 lbs)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/King Crab.png" alt="King Crab">
+                            <img src="assets/images/King Crab.png" alt="King Crab" loading="lazy">
                             <span class="product-badge">Wild Capture</span>
+                            <span class="product-grade-badge">Colossal Red King #1</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">King Crab</h3>
-                            <p class="product-desc">The ultimate premium crab. Huge legs packed with succulent, rich meat.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Bering Sea</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Fall/Winter</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">King Crab</h3>
+                                <span class="product-scientific">Paralithodes camtschaticus · Alaska</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">Colossal spiny legs bursting with tender, rich crimson-tipped meat. The pinnacle luxury shellfish for showpiece centerpieces.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">Colossal 6/9 count (450–650g/leg) &amp; 9/12</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Cooked Whole Legs &amp; Claws · Split Portions</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">Bristol Bay, Alaska · Quota Steel Pots</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Master Case (9.07 kg / 20 lbs) · Brine IQF</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$89.00</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $807 / 9.07 kg case</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Mackerel -->
-                    <div class="product-card" data-category="mackerel">
+                    <div class="product-card" data-category="mackerel" data-source="North Atlantic (Norway / Scotland)" data-method="Midwater Pelagic Trawl · RSW Tank Chilled" data-season="Autumn & Winter Peak (Sept – Dec)" data-size="300 – 500g whole round / 120 – 180g fillets" data-cuts="Whole Round IQF · Pin-Bone-Out Butterfly Fillets" data-price="$11.50 / kg" data-moq="1 Master Carton (10 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/Atlantic Mackerel.png" alt="Atlantic Mackerel">
+                            <img src="assets/images/Atlantic Mackerel.png" alt="Atlantic Mackerel" loading="lazy">
                             <span class="product-badge">Wild Capture</span>
+                            <span class="product-grade-badge">MSC Certified Pelagic</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Atlantic Mackerel</h3>
-                            <p class="product-desc">Rich in flavor and oils. Caught using responsible pelagic methods.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">North Atlantic</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Fall/Winter</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Atlantic Mackerel</h3>
+                                <span class="product-scientific">Scomber scombrus · Cold North Sea</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">Vibrant iridescent skin, high heart-healthy omega-3 fats, and deep rich flavor. Outstanding for hot smoking or skin-crisped grilling.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">300 – 500g whole / 120 – 180g fillets</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Whole Round IQF · Pin-Bone Butterfly Fillets</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">North Atlantic · Midwater Pelagic Trawl</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Master Carton (10 kg) · Fall/Winter</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$11.50</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $115 / 10 kg master carton</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-card" data-category="mackerel">
+
+                    <div class="product-card" data-category="mackerel" data-source="Atlantic / Gulf Coastal Waters" data-method="Light Handlines & Troll Gear · Chilled Brine" data-season="Spring & Summer (April – Sept)" data-size="1.5 – 3.5 kg whole / 300 – 600g thick steaks" data-cuts="Whole Scaled & Gutted · Center-Cut Steaks · Loins" data-price="$16.80 / kg" data-moq="1 Insulated Tote (10 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/Spanish Mackerel.png" alt="Spanish Mackerel">
+                            <img src="assets/images/Spanish Mackerel.png" alt="Spanish Mackerel" loading="lazy">
                             <span class="product-badge">Wild Capture</span>
+                            <span class="product-grade-badge">Day-Boat Handlined</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Spanish Mackerel</h3>
-                            <p class="product-desc">Beautifully marbled, leaner than Atlantic but equally flavorful.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Gulf Coast</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Spring/Summer</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Spanish Mackerel</h3>
+                                <span class="product-scientific">Scomberomorus commerson · Coastal</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">Firm, pale meat with fine texture and subtle clean oiliness. Holds exceptional moisture during grilling and pan-roasting.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">1.5 – 3.5 kg whole / 300 – 600g thick steaks</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Whole Scaled &amp; Gutted · Center Steaks</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">Coastal Waters · Light Handline &amp; Troll</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Insulated Tote (10 kg) · Seasonal Catch</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$16.80</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $168 / 10 kg tote</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-card" data-category="mackerel">
+
+                    <div class="product-card" data-category="mackerel" data-source="Western Pacific Ocean" data-method="Artisanal Netting · Super-Chilled Day-Boat" data-season="Late Spring & Summer (May – Aug)" data-size="150 – 250g whole / 60 – 90g skin-on fillets" data-cuts="Whole Round · Degutted & Descaled · Sashimi Fillets" data-price="$19.50 / kg" data-moq="1 Insulated Carton (5 kg)">
                         <div class="product-img-wrapper">
-                            <img src="assets/images/Horse Mackerel.png" alt="Horse Mackerel">
+                            <img src="assets/images/Horse Mackerel.png" alt="Horse Mackerel" loading="lazy">
                             <span class="product-badge">Wild Capture</span>
+                            <span class="product-grade-badge">Sashimi Grade Shime-Saba</span>
                         </div>
                         <div class="product-content">
-                            <h3 class="product-title">Horse Mackerel</h3>
-                            <p class="product-desc">Highly prized for sushi (Aji). Extremely fresh, handle with care.</p>
-                            <div class="product-meta">
-                                <div class="meta-item"><span class="meta-label">Source</span><span class="meta-value">Pacific Ocean</span></div>
-                                <div class="meta-item"><span class="meta-label">Season</span><span class="meta-value">Summer</span></div>
+                            <div class="product-header-info">
+                                <h3 class="product-title">Horse Mackerel</h3>
+                                <span class="product-scientific">Trachurus japonicus · Pacific Waters</span>
                             </div>
-                            <button class="btn btn-secondary" style="width: 100%" data-modal-target="species-modal">View Details</button>
+                            <p class="product-desc">The sushi bar essential (Aji). Refined oily sheen, tender texture, and clean ocean umami. Excellent cured in vinegar or tataki.</p>
+                            
+                            <div class="product-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Available Size:</span>
+                                    <span class="spec-value">150 – 250g whole / 60 – 90g skin-on fillets</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Cut Formats:</span>
+                                    <span class="spec-value">Whole Round · Degutted · Sashimi Fillets</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Origin &amp; Harvest:</span>
+                                    <span class="spec-value">Western Pacific · Artisanal Day-Boat</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Min. Order (MOQ):</span>
+                                    <span class="spec-value">1 Insulated Carton (5 kg) · Summer Peak</span>
+                                </div>
+                            </div>
+
+                            <div class="product-purchase-footer">
+                                <div class="price-container">
+                                    <div class="price-label">Wholesale Rate</div>
+                                    <div class="price-main">
+                                        <span class="price-amount">$19.50</span>
+                                        <span class="price-unit">/ kg</span>
+                                    </div>
+                                    <div class="price-case-calc">approx. $97.50 / 5 kg carton</div>
+                                </div>
+                                <div class="card-action-btns">
+                                    <button class="btn btn-primary btn-sm btn-order" data-modal-target="wholesale-modal">Order Case</button>
+                                    <button class="btn btn-secondary btn-sm" data-modal-target="species-modal">Specs</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -403,18 +1014,18 @@
             </div>
         </section>
 
-        <!-- SECTION 04A - QUALITY STANDARDS (Split Layout) -->
+        <!-- SECTION 04A - FRESHNESS & QUALITY STANDARDS (Split Layout) -->
         <section class="section-padding" style="background-color: var(--bg-secondary);">
             <div class="container reveal">
                 <div class="grid-2" style="align-items: center; gap: 4rem;">
                     <div>
-                        <h2 class="editorial-heading" style="margin-bottom: 1.5rem;">BEYOND THE CATCH</h2>
-                        <h3 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--accent-main);">Uncompromising Quality.</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.1rem;">Our responsibility to the ocean is matched only by our dedication to culinary excellence. Every species in our catalog undergoes rigorous visual inspection and grading by our master fishmongers before dispatch.</p>
-                        <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem;">By controlling the cold-chain from the exact moment of harvest, we lock in freshness and extend shelf-life, ensuring your kitchen receives seafood at its absolute peak.</p>
+                        <h2 class="editorial-heading" style="margin-bottom: 1.5rem;">FRESHNESS & QUALITY STANDARDS</h2>
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1.5rem; color: var(--accent-main);">Sashimi-Grade Grading, At-Sea Chilling & Cold-Chain Mastery.</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.05rem;">Our responsibility to the ocean is matched by an uncompromising dedication to culinary quality. Every finfish and crustacean landed undergoes rigorous sensory grading by certified master fishmongers before dispatch—evaluating gill brightness, eye clarity, flesh elasticity, and natural ocean aroma to guarantee sashimi-grade integrity.</p>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.05rem;">By enforcing immediate slush-ice bleeding at sea down to 0°C–2°C and operating HACCP Grade-A handling facilities, we preserve natural cellular moisture and healthy omega oils. Continuous IoT temperature logging accompanies every crate, guaranteeing your kitchen receives pristine seafood at peak culinary vitality with maximum shelf life.</p>
                     </div>
                     <div>
-                        <img src="assets/images/cold-chain.webp" alt="Quality Inspection" style="border-radius: var(--radius-lg); width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/3; box-shadow: var(--shadow-md);">
+                        <img src="assets/images/cold-chain.webp" alt="Freshness and Quality Standards Inspection" style="border-radius: var(--radius-lg); width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/3; box-shadow: var(--shadow-md);">
                     </div>
                 </div>
             </div>
@@ -424,8 +1035,8 @@
         <section class="section-padding">
             <div class="container reveal">
                 <div class="text-center" style="margin-bottom: 4rem;">
-                    <h2>WHOLESALE FORMATS</h2>
-                    <p style="color: var(--text-secondary); max-width: 600px; margin-inline: auto;">Tailored processing to meet the exact requirements of your kitchen.</p>
+                    <h2>CHEF-READY WHOLESALE FORMATS</h2>
+                    <p style="color: var(--text-secondary); max-width: 650px; margin-inline: auto;">Precision processing and custom butchery tailored to eliminate kitchen prep waste and optimize service speed.</p>
                 </div>
                 
                 <div class="grid-3 text-center" style="gap: 3rem;">
@@ -433,22 +1044,22 @@
                         <div style="width: 64px; height: 64px; border-radius: 50%; background-color: var(--bg-secondary); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--accent-main);">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                         </div>
-                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Whole Round</h4>
-                        <p style="color: var(--text-secondary);">Delivered untouched for maximum freshness and in-house butchery. Ideal for display and zero-waste kitchens.</p>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Whole Round & G&S</h4>
+                        <p style="color: var(--text-secondary);">Delivered untouched or gutted-and-scaled for maximum freshness, in-house master butchery, and zero-waste nose-to-tail culinary programs.</p>
                     </div>
                     <div>
                         <div style="width: 64px; height: 64px; border-radius: 50%; background-color: var(--bg-secondary); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--accent-main);">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
                         </div>
-                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Filleted & Trimmed</h4>
-                        <p style="color: var(--text-secondary);">Expertly pin-boned and trimmed to your specifications, reducing prep time and labor costs.</p>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Filleted, Skinned & Trimmed</h4>
+                        <p style="color: var(--text-secondary);">Expertly pin-boned and portion-trimmed to your kitchen specifications, reducing culinary prep labor while maintaining knife-edge precision.</p>
                     </div>
                     <div>
                         <div style="width: 64px; height: 64px; border-radius: 50%; background-color: var(--bg-secondary); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--accent-main);">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
                         </div>
-                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Precision Portioned</h4>
-                        <p style="color: var(--text-secondary);">Cut to precise weights for perfect consistency, portion control, and streamlined service.</p>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Precision Sashimi Portions</h4>
+                        <p style="color: var(--text-secondary);">Saku blocks, uniform weight steaks, and live/chilled crustacean clusters calibrated for consistency, portion cost control, and swift plating.</p>
                     </div>
                 </div>
             </div>
@@ -472,34 +1083,46 @@
             
             <div class="grid-2" style="gap: 0; margin: 0;">
                 <div style="aspect-ratio: 4/5; position: relative;">
-                    <img src="assets/images/species-salmon.webp" alt="Species Details" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img id="modal-species-img" src="assets/images/species-salmon.webp" alt="Species Details" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div style="padding: 3rem 2rem; display: flex; flex-direction: column;">
-                    <div style="font-size: 0.8rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 0.5rem;">Aquaculture</div>
-                    <h3 class="editorial-heading" style="font-size: 2rem; margin-bottom: 1.5rem;">Atlantic Salmon</h3>
+                    <div id="modal-species-badge" style="font-size: 0.8rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 0.5rem;">Aquaculture</div>
+                    <h3 id="modal-species-title" class="editorial-heading" style="font-size: 2rem; margin-bottom: 1.5rem;">Atlantic Salmon</h3>
                     
-                    <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; font-size: 0.95rem;">
-                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
-                            <span style="color: var(--text-secondary);">Origin Example</span>
-                            <span style="font-weight: 500;">North Atlantic</span>
+                    <div style="display: flex; flex-direction: column; gap: 0.65rem; margin-bottom: 1.5rem; font-size: 0.88rem;">
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.4rem;">
+                            <span style="color: var(--text-secondary);">Origin</span>
+                            <span id="modal-species-source" style="font-weight: 500;">North Atlantic (Norway)</span>
                         </div>
-                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
-                            <span style="color: var(--text-secondary);">Method</span>
-                            <span style="font-weight: 500;">Ocean Pens</span>
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.4rem;">
+                            <span style="color: var(--text-secondary);">Catch / Harvest</span>
+                            <span id="modal-species-method" style="font-weight: 500;">Low-Density Ocean Pens</span>
                         </div>
-                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
-                            <span style="color: var(--text-secondary);">Handling</span>
-                            <span style="font-weight: 500;">Chilled &lt; 2°C</span>
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.4rem;">
+                            <span style="color: var(--text-secondary);">Available Sizes</span>
+                            <span id="modal-species-size" style="font-weight: 500;">3.5 – 5.0 kg whole / 1.8 – 2.4 kg fillets</span>
                         </div>
-                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
-                            <span style="color: var(--text-secondary);">Availability</span>
-                            <span style="font-weight: 500;">Year-round</span>
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.4rem;">
+                            <span style="color: var(--text-secondary);">Cut Formats</span>
+                            <span id="modal-species-cuts" style="font-weight: 500;">Whole G&amp;S · Trim D Skin-On · Portions</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.4rem;">
+                            <span style="color: var(--text-secondary);">Wholesale Price</span>
+                            <span id="modal-species-price" style="font-weight: 700; color: var(--accent-main);">$22.50 / kg</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.4rem;">
+                            <span style="color: var(--text-secondary);">Minimum Order</span>
+                            <span id="modal-species-moq" style="font-weight: 500;">1 Master Case (10 kg)</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 0.4rem;">
+                            <span style="color: var(--text-secondary);">Seasonality</span>
+                            <span id="modal-species-season" style="font-weight: 500;">Year-round Availability</span>
                         </div>
                     </div>
                     
-                    <div style="margin-bottom: 2rem;">
-                        <div style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Sustainability Information</div>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Low density farming practices ensuring high animal welfare and minimal environmental impact.</p>
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-main); margin-bottom: 0.35rem;">Culinary &amp; Quality Notes</div>
+                        <p id="modal-species-desc" style="font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">High-omega fat content with deep coral marbling and silky mouthfeel. Superior grade for raw crudo or pan-searing.</p>
                     </div>
                     
                     <button class="btn btn-primary" style="width: 100%; margin-top: auto;" data-modal-target="wholesale-modal">ENQUIRE ABOUT THIS SPECIES</button>
@@ -586,11 +1209,11 @@
                 <div>
                     <div class="nav-logo" style="margin-bottom: 1.5rem;">
                         <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
-    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
-    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+    <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="logo-frame" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="currentColor" class="logo-fish" />
+    <polygon points="63,35 75,25 72,35 75,45" fill="currentColor" class="logo-fish" />
 </svg>
                         <div>
                             <div class="nav-logo-text" style="font-size: 1rem;">TIDE & TRACE</div>

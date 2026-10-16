@@ -17,11 +17,11 @@
         <div class="container nav-container">
             <a href="index.html" class="nav-logo">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
-    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
-    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+    <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="logo-frame" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="currentColor" class="logo-fish" />
+    <polygon points="63,35 75,25 72,35 75,45" fill="currentColor" class="logo-fish" />
 </svg>
                 <div>
                     <div class="nav-logo-text">TIDE & TRACE</div>
@@ -89,7 +89,7 @@
         <!-- SECTION 01 - HERO -->
         <section class="hero-ocean" style="min-height: 60svh; align-items: center;">
             <div class="hero-bg">
-                <img src="assets/images/contact-ocean.webp" alt="Ocean Sunset" onerror="this.src='assets/images/hero-ocean.webp'">
+                <img src="assets/images/hero-ocean.webp" alt="Pristine Blue Ocean Horizon">
             </div>
             <div class="hero-overlay" style="background: rgba(4, 27, 35, 0.5);"></div>
             <div class="container relative z-10 text-center reveal">
@@ -152,9 +152,13 @@
                     </div>
                     
                     <!-- Image Side -->
-                    <div style="position: relative; min-height: 500px;">
-                        <img src="assets/images/TIDE & TRACE.png" alt="Coastal Office" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.1), transparent); mix-blend-mode: multiply;"></div>
+                    <div style="position: relative; min-height: 500px; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; overflow: hidden;">
+                        <img src="assets/images/TIDE & TRACE.png" alt="Tide & Trace Direct Refrigerated Logistics Fleet and Cold-Chain Delivery Handover" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(7, 59, 76, 0.7) 0%, transparent 50%);"></div>
+                        <div style="position: absolute; bottom: 2rem; left: 2rem; right: 2rem; color: #fff; background: rgba(7, 59, 76, 0.85); backdrop-filter: blur(8px); padding: 1.25rem 1.5rem; border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.2);">
+                            <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-light, #48cae4); font-weight: 700; margin-bottom: 0.25rem;">Direct Cold-Chain Logistics</div>
+                            <div style="font-size: 0.95rem; font-weight: 500;">Dedicated refrigerated dispatch serving hospitality kitchens within 24–48 hours of ocean landing.</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -382,11 +386,11 @@
                 <div>
                     <div class="nav-logo" style="margin-bottom: 1.5rem;">
                         <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
-    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
-    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+    <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="logo-frame" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="currentColor" class="logo-fish" />
+    <polygon points="63,35 75,25 72,35 75,45" fill="currentColor" class="logo-fish" />
 </svg>
                         <div>
                             <div class="nav-logo-text" style="font-size: 1rem;">TIDE & TRACE</div>

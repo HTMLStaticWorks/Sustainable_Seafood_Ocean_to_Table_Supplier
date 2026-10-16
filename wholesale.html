@@ -8,17 +8,12 @@
     <meta property="og:title" content="Wholesale Seafood Orders | Tide & Trace">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .type-selector, .species-grid { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; justify-content: center; }
+        .type-selector { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; justify-content: center; }
         .type-btn { padding: 1rem 1.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-weight: 500; cursor: pointer; transition: all var(--transition-fast); background: var(--card-bg); color: var(--text-primary); text-align: center; }
         .type-btn:hover, .type-btn.active { border-color: var(--accent-main); background: var(--bg-secondary); }
         
-        .checkbox-card { border: 1px solid var(--border-color); padding: 1.5rem; border-radius: var(--radius-md); background: var(--card-bg); cursor: pointer; transition: all var(--transition-fast); text-align: center; }
-        .checkbox-card:hover { border-color: var(--accent-main); }
-        .checkbox-card input { display: none; }
-        .checkbox-card:has(input:checked) { border-color: var(--accent-main); background: var(--bg-secondary); }
-
         @media (max-width: 768px) {
-            .type-selector, .species-grid {
+            .type-selector {
                 flex-direction: column;
                 align-items: stretch;
             }
@@ -41,11 +36,11 @@
         <div class="container nav-container">
             <a href="index.html" class="nav-logo">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
-    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
-    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+    <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="logo-frame" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="currentColor" class="logo-fish" />
+    <polygon points="63,35 75,25 72,35 75,45" fill="currentColor" class="logo-fish" />
 </svg>
                 <div>
                     <div class="nav-logo-text">TIDE & TRACE</div>
@@ -123,6 +118,110 @@
             </div>
         </section>
 
+        <!-- SECTION 01B - SEAFOOD OPTIONS AVAILABLE FOR SOURCING (Visual Showcase) -->
+        <section class="section-padding" style="background-color: var(--bg-primary); border-bottom: 1px solid var(--border-color);">
+            <div class="container reveal">
+                <div class="text-center" style="max-width: 780px; margin-inline: auto; margin-bottom: 3.5rem;">
+                    <span class="hero-subtitle" style="color: var(--accent-main); margin-bottom: 0.75rem;">Direct Vessel &amp; Farm Provenance</span>
+                    <h2 class="editorial-heading" style="margin-bottom: 1.25rem;">SEAFOOD OPTIONS AVAILABLE FOR SOURCING</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.6;">Browse our core wild-capture and certified eco-aquaculture species below. Each variety is harvested by verified partner fleets, held under unbroken cold chain, and available in custom wholesale cuts for hospitality operations.</p>
+                </div>
+
+                <div class="wholesale-showcase-grid">
+                    <!-- Salmon -->
+                    <div class="showcase-species-card" data-select-species="Salmon" style="cursor: pointer;">
+                        <div class="showcase-species-img-wrapper">
+                            <img src="assets/images/Pacific King Salmon.png" alt="Pacific King Salmon" loading="lazy">
+                        </div>
+                        <div class="showcase-species-body">
+                            <h4 class="showcase-species-title">Salmon (Wild &amp; Farmed)</h4>
+                            <div class="showcase-species-origin">North Atlantic &amp; Alaska</div>
+                            <p class="showcase-species-desc">Rich omega-3 marbling with buttery flaking. Available as whole gutted-and-scaled, skin-on fillets, and precision portions.</p>
+                            <span class="showcase-species-badge">ASC &amp; MSC Certified</span>
+                        </div>
+                    </div>
+
+                    <!-- Cod -->
+                    <div class="showcase-species-card" data-select-species="Cod" style="cursor: pointer;">
+                        <div class="showcase-species-img-wrapper">
+                            <img src="assets/images/Atlantic Cod.png" alt="Wild Atlantic Cod" loading="lazy">
+                        </div>
+                        <div class="showcase-species-body">
+                            <h4 class="showcase-species-title">Atlantic Cod</h4>
+                            <div class="showcase-species-origin">North Atlantic &amp; Iceland</div>
+                            <p class="showcase-species-desc">Snow-white, tender flaking meat with clean sea-sweet taste. Line-caught day-boat landings iced immediately at sea.</p>
+                            <span class="showcase-species-badge">Single Hook &amp; Line</span>
+                        </div>
+                    </div>
+
+                    <!-- Sea Bass -->
+                    <div class="showcase-species-card" data-select-species="Sea Bass" style="cursor: pointer;">
+                        <div class="showcase-species-img-wrapper">
+                            <img src="assets/images/European Sea Bass.png" alt="European Sea Bass" loading="lazy">
+                        </div>
+                        <div class="showcase-species-body">
+                            <h4 class="showcase-species-title">European Sea Bass</h4>
+                            <div class="showcase-species-origin">Mediterranean Waters</div>
+                            <p class="showcase-species-desc">Fine delicate flakes with prized crispy skin performance. Sourced from artisanal hook fleets and low-density lagoons.</p>
+                            <span class="showcase-species-badge">Chilled &lt; 2°C Slush</span>
+                        </div>
+                    </div>
+
+                    <!-- Prawns -->
+                    <div class="showcase-species-card" data-select-species="Prawns" style="cursor: pointer;">
+                        <div class="showcase-species-img-wrapper">
+                            <img src="assets/images/King Prawns.png" alt="King Prawns" loading="lazy">
+                        </div>
+                        <div class="showcase-species-body">
+                            <h4 class="showcase-species-title">King &amp; Tiger Prawns</h4>
+                            <div class="showcase-species-origin">Coastal Mangrove Farms</div>
+                            <p class="showcase-species-desc">Plump, crunchy texture with natural ocean snap. Calibrated in colossal U/10 and 16/20 counts, head-on or peeled.</p>
+                            <span class="showcase-species-badge">Zero Antibiotics</span>
+                        </div>
+                    </div>
+
+                    <!-- Crab -->
+                    <div class="showcase-species-card" data-select-species="Crab" style="cursor: pointer;">
+                        <div class="showcase-species-img-wrapper">
+                            <img src="assets/images/King Crab.png" alt="Wild Alaskan King Crab" loading="lazy">
+                        </div>
+                        <div class="showcase-species-body">
+                            <h4 class="showcase-species-title">Alaskan King Crab</h4>
+                            <div class="showcase-species-origin">Bering Sea &amp; North Pacific</div>
+                            <p class="showcase-species-desc">Succulent, sweet leg meat and colossal clusters. Harvested with escape-ring wire pots protecting marine ecosystems.</p>
+                            <span class="showcase-species-badge">Escape-Ring Trap Caught</span>
+                        </div>
+                    </div>
+
+                    <!-- Tuna -->
+                    <div class="showcase-species-card" data-select-species="Tuna" style="cursor: pointer;">
+                        <div class="showcase-species-img-wrapper">
+                            <img src="assets/images/Yellowfin Tuna.png" alt="Yellowfin Tuna" loading="lazy">
+                        </div>
+                        <div class="showcase-species-body">
+                            <h4 class="showcase-species-title">Yellowfin &amp; Bluefin Tuna</h4>
+                            <div class="showcase-species-origin">Pacific Ocean &amp; Mediterranean</div>
+                            <p class="showcase-species-desc">Ruby-red sashimi grade #1 loins and precision-cut steaks. Handline-caught with zero dolphin bycatch, super-chilled.</p>
+                            <span class="showcase-species-badge">Sashimi Grade #1</span>
+                        </div>
+                    </div>
+
+                    <!-- Mackerel -->
+                    <div class="showcase-species-card" data-select-species="Mackerel" style="cursor: pointer;">
+                        <div class="showcase-species-img-wrapper">
+                            <img src="assets/images/Atlantic Mackerel.png" alt="North Atlantic Mackerel" loading="lazy">
+                        </div>
+                        <div class="showcase-species-body">
+                            <h4 class="showcase-species-title">Atlantic Mackerel</h4>
+                            <div class="showcase-species-origin">Cold North Sea &amp; Norway</div>
+                            <p class="showcase-species-desc">Deep savory flavor packed with healthy heart omegas. Excellent for curing, grilling, and high-heat wood smoking.</p>
+                            <span class="showcase-species-badge">MSC Certified Pelagic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ENQUIRY BUILDER CONTAINER -->
         <div id="enquiry-form" style="background-color: var(--bg-secondary); padding-block: 4rem;">
             <div class="container">
@@ -146,33 +245,125 @@
                         <!-- SECTION 03 - WHAT ARE YOU SOURCING? -->
                         <div class="reveal" style="margin-bottom: 4rem; border-bottom: 1px solid var(--border-color); padding-bottom: 3rem;">
                             <h3 style="margin-bottom: 1.5rem; text-align: center;">2. WHAT ARE YOU SOURCING?</h3>
-                            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.9rem;">Select all that apply. (Illustrative frontend demo - no real inventory claimed).</p>
-                            
-                            <div class="grid-3 species-grid">
+                            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.95rem;">Select all seafood varieties required for your kitchen. Each option features distinct species specifications and certified catch methods.</p>
+                                                        <div class="species-grid">
+                                <!-- Salmon -->
                                 <label class="checkbox-card">
                                     <input type="checkbox" name="species" value="Salmon">
-                                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Salmon</div>
-                                    <div style="font-size: 0.85rem; color: var(--text-secondary);">Whole / Fillet / Portioned</div>
+                                    <div class="checkbox-card-img-wrapper">
+                                        <img src="assets/images/Sockeye Salmon.png" alt="Wild Sockeye Salmon" loading="lazy">
+                                        <span class="checkbox-card-badge">Wild &amp; Farmed</span>
+                                        <div class="checkbox-check-indicator" aria-hidden="true">
+                                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox-card-body">
+                                        <div class="checkbox-card-title">Salmon</div>
+                                        <div class="checkbox-card-formats">Whole G&amp;S · Fillets · Portions</div>
+                                        <div class="checkbox-card-origin">North Atlantic &amp; Alaska</div>
+                                    </div>
                                 </label>
+
+                                <!-- Cod -->
                                 <label class="checkbox-card">
-                                    <input type="checkbox" name="species" value="Tuna">
-                                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Tuna</div>
-                                    <div style="font-size: 0.85rem; color: var(--text-secondary);">Loins / Steaks</div>
+                                    <input type="checkbox" name="species" value="Cod">
+                                    <div class="checkbox-card-img-wrapper">
+                                        <img src="assets/images/Pacific Cod.png" alt="Pacific Cod Variety" loading="lazy">
+                                        <span class="checkbox-card-badge">Wild Line-Caught</span>
+                                        <div class="checkbox-check-indicator" aria-hidden="true">
+                                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox-card-body">
+                                        <div class="checkbox-card-title">Pacific &amp; Atlantic Cod</div>
+                                        <div class="checkbox-card-formats">Skinless Loins · Fillets · Whole</div>
+                                        <div class="checkbox-card-origin">North Atlantic &amp; Pacific Day-Boats</div>
+                                    </div>
                                 </label>
+
+                                <!-- Sea Bass -->
                                 <label class="checkbox-card">
                                     <input type="checkbox" name="species" value="Sea Bass">
-                                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Sea Bass</div>
-                                    <div style="font-size: 0.85rem; color: var(--text-secondary);">Whole / Fillet</div>
+                                    <div class="checkbox-card-img-wrapper">
+                                        <img src="assets/images/Black Sea Bass.png" alt="Black &amp; European Sea Bass" loading="lazy">
+                                        <span class="checkbox-card-badge">Wild &amp; Eco-Pens</span>
+                                        <div class="checkbox-check-indicator" aria-hidden="true">
+                                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox-card-body">
+                                        <div class="checkbox-card-title">Sea Bass</div>
+                                        <div class="checkbox-card-formats">Whole Scaled · Butterfly Fillets</div>
+                                        <div class="checkbox-card-origin">Mediterranean &amp; Atlantic</div>
+                                    </div>
                                 </label>
+
+                                <!-- Prawns -->
                                 <label class="checkbox-card">
                                     <input type="checkbox" name="species" value="Prawns">
-                                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Prawns</div>
-                                    <div style="font-size: 0.85rem; color: var(--text-secondary);">Whole / Shell-on</div>
+                                    <div class="checkbox-card-img-wrapper">
+                                        <img src="assets/images/Tiger Prawns.png" alt="Tiger Prawns Variety" loading="lazy">
+                                        <span class="checkbox-card-badge">Certified Organic</span>
+                                        <div class="checkbox-check-indicator" aria-hidden="true">
+                                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox-card-body">
+                                        <div class="checkbox-card-title">Prawns (King &amp; Tiger)</div>
+                                        <div class="checkbox-card-formats">U/10 &amp; 16/20 · Shell-on · Peeled</div>
+                                        <div class="checkbox-card-origin">Ecuador &amp; Indo-Pacific</div>
+                                    </div>
                                 </label>
+
+                                <!-- Crab -->
                                 <label class="checkbox-card">
                                     <input type="checkbox" name="species" value="Crab">
-                                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Crab</div>
-                                    <div style="font-size: 0.85rem; color: var(--text-secondary);">Whole / Clusters</div>
+                                    <div class="checkbox-card-img-wrapper">
+                                        <img src="assets/images/Snow Crab.png" alt="Snow Crab Variety" loading="lazy">
+                                        <span class="checkbox-card-badge">MSC Certified</span>
+                                        <div class="checkbox-check-indicator" aria-hidden="true">
+                                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox-card-body">
+                                        <div class="checkbox-card-title">Crab (Snow &amp; King)</div>
+                                        <div class="checkbox-card-formats">Clusters · Whole Live · Cooked</div>
+                                        <div class="checkbox-card-origin">Bering Sea &amp; Alaska</div>
+                                    </div>
+                                </label>
+
+                                <!-- Tuna -->
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="species" value="Tuna">
+                                    <div class="checkbox-card-img-wrapper">
+                                        <img src="assets/images/Bluefin Tuna.png" alt="Bluefin &amp; Yellowfin Tuna" loading="lazy">
+                                        <span class="checkbox-card-badge">Sashimi Grade #1</span>
+                                        <div class="checkbox-check-indicator" aria-hidden="true">
+                                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox-card-body">
+                                        <div class="checkbox-card-title">Tuna (Yellowfin &amp; Bluefin)</div>
+                                        <div class="checkbox-card-formats">AAA Saku Loins · Custom Steaks</div>
+                                        <div class="checkbox-card-origin">Pacific Ocean &amp; Mediterranean</div>
+                                    </div>
+                                </label>
+
+                                <!-- Mackerel -->
+                                <label class="checkbox-card">
+                                    <input type="checkbox" name="species" value="Mackerel">
+                                    <div class="checkbox-card-img-wrapper">
+                                        <img src="assets/images/Spanish Mackerel.png" alt="Spanish &amp; Atlantic Mackerel" loading="lazy">
+                                        <span class="checkbox-card-badge">Wild Pelagic</span>
+                                        <div class="checkbox-check-indicator" aria-hidden="true">
+                                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox-card-body">
+                                        <div class="checkbox-card-title">Mackerel</div>
+                                        <div class="checkbox-card-formats">Whole Round · Pin-Bone Fillets</div>
+                                        <div class="checkbox-card-origin">North Atlantic &amp; North Sea</div>
+                                    </div>
                                 </label>
                             </div>
                             
@@ -366,11 +557,11 @@
                 <div>
                     <div class="nav-logo" style="margin-bottom: 1.5rem;">
                         <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
-    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
-    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+    <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="logo-frame" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="currentColor" class="logo-fish" />
+    <polygon points="63,35 75,25 72,35 75,45" fill="currentColor" class="logo-fish" />
 </svg>
                         <div>
                             <div class="nav-logo-text" style="font-size: 1rem;">TIDE & TRACE</div>
@@ -440,6 +631,26 @@
             btn.addEventListener('click', () => {
                 document.querySelectorAll('.type-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
+            });
+        });
+
+        // Interactive showcase cards: clicking auto-checks the variety in Section 2 and scrolls smoothly
+        document.querySelectorAll('.showcase-species-card[data-select-species]').forEach(card => {
+            card.addEventListener('click', () => {
+                const species = card.getAttribute('data-select-species');
+                const targetCheckbox = document.querySelector(`input[name="species"][value="${species}"]`);
+                if (targetCheckbox) {
+                    targetCheckbox.checked = true;
+                    targetCheckbox.dispatchEvent(new Event('change', { bubbles: true }));
+                    const checkboxCard = targetCheckbox.closest('.checkbox-card');
+                    if (checkboxCard) {
+                        checkboxCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        checkboxCard.style.outline = '2px solid var(--accent-main)';
+                        setTimeout(() => {
+                            checkboxCard.style.outline = '';
+                        }, 1500);
+                    }
+                }
             });
         });
     </script>

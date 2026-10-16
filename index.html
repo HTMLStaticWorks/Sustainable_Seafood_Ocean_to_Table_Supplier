@@ -18,11 +18,11 @@
         <div class="container nav-container">
             <a href="index.html" class="nav-logo">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
-    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
-    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+    <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="logo-frame" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="currentColor" class="logo-fish" />
+    <polygon points="63,35 75,25 72,35 75,45" fill="currentColor" class="logo-fish" />
 </svg>
                 <div>
                     <div class="nav-logo-text">TIDE & TRACE</div>
@@ -95,9 +95,9 @@
             <div class="hero-overlay" style="background: rgba(4, 27, 35, 0.65);"></div>
             <div class="container relative z-10">
                 <div class="hero-content reveal active" style="max-width: 900px; margin-inline: auto; display: flex; flex-direction: column; align-items: center;">
-                    <span class="hero-subtitle" style="color: var(--c-sand);">Premium Ocean Supplier</span>
-                    <h1 class="hero-title" style="color: var(--c-white);">FROM RESPONSIBLE WATERS TO BETTER TABLES.</h1>
-                    <p class="hero-text" style="color: rgba(255, 255, 255, 0.9); margin-inline: auto;">Premium seafood sourced with greater transparency, responsible practices and a clear path from ocean to table.</p>
+                    <span class="hero-subtitle" style="color: var(--c-sand);">Direct Ocean-to-Table Supplier</span>
+                    <h1 class="hero-title" style="color: var(--c-white);">SUSTAINABLE SEAFOOD SOURCED WITH INTEGRITY, DELIVERED WITH PROVENANCE.</h1>
+                    <p class="hero-text" style="color: rgba(255, 255, 255, 0.9); margin-inline: auto;">Connecting chef-driven kitchens and conscious buyers directly to certified day-boat fishers and eco-aquaculture farms. We deliver wild salmon, yellowfin tuna, sea bass, prawns, and crab via an unbroken 24–48 hour cold chain straight from ocean waters to your table.</p>
                     <div class="hero-actions" style="justify-content: center;">
                         <a href="products.html" class="btn btn-primary">Explore Our Seafood</a>
                         <a href="traceability.html" class="btn btn-secondary" style="border-color: var(--c-white); color: var(--c-white);">Trace The Journey</a>
@@ -110,23 +110,29 @@
         <section class="section-padding">
             <div class="container split-section" style="gap: 4rem; align-items: center;">
                 <div class="reveal">
-                    <h2 class="editorial-heading" style="margin-bottom: 2rem;">WHERE EVERY CATCH HAS A STORY.</h2>
-                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">We believe that better seafood begins long before the catch. Our approach centers on partnering with conscious fisheries and responsible aquaculture operations that prioritize ocean health.</p>
-                    <p style="margin-bottom: 3rem; color: var(--text-secondary);">By maintaining strict cold-chain discipline and cultivating direct supplier relationships, we deliver exceptional freshness and transparency to premium hospitality businesses.</p>
+                    <h2 class="editorial-heading" style="margin-bottom: 2rem;">WHERE EVERY CATCH HAS A STORY & VERIFIED ORIGIN.</h2>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">Tide & Trace operates as a dedicated ocean-to-table seafood supplier, eliminating multi-tiered broker networks to connect professional kitchens directly with ethical fisheries. We source exclusively from small-scale coastal fleets in the North Atlantic and Pacific Northwest, wild crab grounds in Alaska, and certified low-density coastal aquaculture lagoons.</p>
+                    <p style="margin-bottom: 3rem; color: var(--text-secondary);">Every harvest relies on selective, low-impact methods—including single hook-and-line, deep-water pot traps, and restorative ocean enclosures—strictly avoiding destructive bottom trawling and high-bycatch nets. Hand-graded and immediately chilled, our seafood reaches chefs within 24 to 48 hours of landing backed by scannable harvest data.</p>
                     
-                    <div class="grid-2">
-                        <div>
-                            <h3 style="font-size: 2.5rem; color: var(--accent-main); margin-bottom: 0.5rem;">45+</h3>
-                            <div style="font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Source Locations</div>
+                    <div class="grid-2" style="gap: 1.5rem;">
+                        <div style="background: var(--bg-secondary); padding: 1.75rem 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); text-align: center;">
+                            <h3 style="font-size: 2.75rem; color: var(--accent-main); margin-bottom: 0.25rem; font-family: var(--font-heading); line-height: 1;">45+</h3>
+                            <div style="font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-primary);">Source Grounds & Fleets</div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem;">Certified coastal day-boat partners</div>
                         </div>
-                        <div>
-                            <h3 style="font-size: 2.5rem; color: var(--accent-main); margin-bottom: 0.5rem;">100%</h3>
-                            <div style="font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Traceable Lots</div>
+                        <div style="background: var(--bg-secondary); padding: 1.75rem 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); text-align: center;">
+                            <h3 style="font-size: 2.75rem; color: var(--accent-main); margin-bottom: 0.25rem; font-family: var(--font-heading); line-height: 1;">100%</h3>
+                            <div style="font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-primary);">Ocean-To-Table Traceable</div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem;">Verified vessel, port & lot pedigree</div>
                         </div>
                     </div>
                 </div>
                 <div class="reveal delay-200" style="position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/5;">
-                    <img src="assets/images/sourcing-story.webp" alt="Fishermen working at sea" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="assets/images/sourcing-story.webp" alt="Artisanal Fishermen Hauling Fresh Ocean Catch at Sea" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 1.5rem; inset-inline-start: 1.5rem; background: var(--glass-bg); backdrop-filter: blur(8px); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.2); max-width: 280px;">
+                        <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-main); margin-bottom: 0.25rem;">Direct Vessel Provenance</div>
+                        <div style="font-size: 0.85rem; color: var(--text-primary); font-weight: 500;">Small-boat fleets landing within 24 to 48 hours of culinary kitchen delivery.</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -135,15 +141,18 @@
         <section class="section-padding" style="background-color: var(--bg-secondary);">
             <div class="container">
                 <div class="text-center reveal" style="margin-bottom: 4rem; max-width: 600px; margin-inline: auto;">
-                    <h2 style="margin-bottom: 1rem;">PREMIUM SPECIES</h2>
-                    <p color="var(--text-secondary)">Explore our core selection of responsibly sourced seafood, selected for premium culinary applications.</p>
+                    <h2 style="margin-bottom: 1rem;">OUR SUSTAINABLE SEAFOOD SELECTION</h2>
+                    <p style="color: var(--text-secondary);">Explore our core portfolio of responsibly wild-caught and eco-farmed species, hand-graded for sashimi bars, fine dining, and culinary excellence.</p>
                 </div>
 
                 <div class="species-selector reveal delay-100">
-                    <button class="species-btn active" data-img="assets/images/species-salmon.webp" data-title="Atlantic Salmon" data-source="North Atlantic" data-desc="Rich, buttery texture with deep color. Farmed using advanced responsible aquaculture practices ensuring low environmental impact.">Salmon</button>
-                    <button class="species-btn" data-img="assets/images/species-tuna.webp" data-title="Yellowfin Tuna" data-source="Pacific Ocean" data-desc="Firm texture with deep red color, ideal for raw applications. Caught using sustainable line methods.">Tuna</button>
-                    <button class="species-btn" data-img="assets/images/species-prawns.webp" data-title="King Prawns" data-source="Coastal Aquaculture" data-desc="Sweet, crisp texture. Carefully harvested and immediately chilled to preserve natural ocean sweetness.">Prawns</button>
-                    <button class="species-btn" data-img="assets/images/species-crab.webp" data-title="Snow Crab" data-source="North Pacific" data-desc="Delicate, sweet meat from strictly managed wild-capture fisheries. Processed and frozen at sea.">Crab</button>
+                    <button class="species-btn active" data-img="assets/images/species-salmon.webp" data-title="Wild & Farmed Salmon" data-source="North Atlantic & Alaska" data-tags="Sashimi Grade,Omega-3 Rich,Hook-and-Line / Pens" data-desc="Featuring wild-caught Alaskan King and Sockeye Salmon alongside ASC-certified North Atlantic Salmon. Rich in natural omega-3s with a pristine, buttery finish, landed under strict harvest quotas."><img src="assets/images/Pacific King Salmon.png" class="species-btn-thumb" alt="Salmon">Salmon</button>
+                    <button class="species-btn" data-img="assets/images/Atlantic Cod.png" data-title="Wild Atlantic Cod" data-source="North Atlantic & Iceland" data-tags="Single Hook & Line,Day-Boat Landed,MSC Certified" data-desc="Pristine line-caught Atlantic Cod with tender, snow-white flakes and clean oceanic sweetness. Handled with immediate slush-ice bleed and unbroken 0°C chilling for optimal culinary yield."><img src="assets/images/Atlantic Cod.png" class="species-btn-thumb" alt="Atlantic Cod">Cod</button>
+                    <button class="species-btn" data-img="assets/images/species-seabass.webp" data-title="European & Black Sea Bass" data-source="Mediterranean & Atlantic Coasts" data-tags="Delicate Sweet Flakes,Crisp-Skin Yield,Eco-Aquaculture" data-desc="Delicate, sweet white flakes with crisp-skin potential. Sourced from artisanal small-boat hook fleets and low-impact coastal pens maintaining superior water quality standards."><img src="assets/images/European Sea Bass.png" class="species-btn-thumb" alt="Sea Bass">Sea Bass</button>
+                    <button class="species-btn" data-img="assets/images/species-prawns.webp" data-title="King Prawns & Spot Prawns" data-source="Clean Coastal Aquaculture & Pacific" data-tags="Natural Ocean Sweetness,Mangrove-Friendly,Cold-Chilled Ice" data-desc="Sweet, crisp texture and vibrant coloration. Harvested from certified organic mangrove-friendly aquaculture and cold-water spot prawn traps, immediately chilled on ice."><img src="assets/images/King Prawns.png" class="species-btn-thumb" alt="Prawns">Prawns</button>
+                    <button class="species-btn" data-img="assets/images/species-crab.webp" data-title="Wild Snow Crab & King Crab" data-source="Bering Sea & North Pacific" data-tags="Sweet Leg Clusters,Bering Sea Wild,Escape-Ring Traps" data-desc="Succulent, naturally sweet leg clusters harvested from strictly regulated sub-arctic fisheries using escape-ring pot traps to protect juvenile crab populations."><img src="assets/images/Snow Crab.png" class="species-btn-thumb" alt="Crab">Crab</button>
+                    <button class="species-btn" data-img="assets/images/species-tuna.webp" data-title="Yellowfin & Albacore Tuna" data-source="Pacific & Indo-Pacific Oceans" data-tags="Sashimi Grade A+,Zero Bycatch,Pole-and-Line" data-desc="Sashimi-grade loins and whole fish caught exclusively with artisanal pole-and-line and trolling lines. Clean ruby-red flesh, firm culinary texture, and zero dolphin or turtle bycatch."><img src="assets/images/Yellowfin Tuna.png" class="species-btn-thumb" alt="Tuna">Tuna</button>
+                    <button class="species-btn" data-img="assets/images/species-mackerel.webp" data-title="Atlantic & Spanish Mackerel" data-source="North Atlantic Open Waters" data-tags="Rich Healthy Oils,Bold Flavor,Pelagic Handline" data-desc="Rich in healthy oils and bold, savory flavor. Harvested by coastal day-boats using pelagic handlines, ideal for curing, searing, and traditional sushi preparations."><img src="assets/images/Atlantic Mackerel.png" class="species-btn-thumb" alt="Mackerel">Mackerel</button>
                 </div>
 
                 <div class="species-display reveal delay-200">
@@ -151,9 +160,14 @@
                         <img id="species-explorer-img" src="assets/images/species-salmon.webp" alt="Species showcase">
                     </div>
                     <div>
-                        <div style="font-size: 0.9rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 1rem;" id="species-explorer-source">North Atlantic</div>
-                        <h3 id="species-explorer-title" style="font-size: 3rem; margin-bottom: 1.5rem;">Atlantic Salmon</h3>
-                        <p id="species-explorer-desc" style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem; max-width: 500px;">Rich, buttery texture with deep color. Farmed using advanced responsible aquaculture practices ensuring low environmental impact.</p>
+                        <div style="font-size: 0.9rem; font-weight: 600; color: var(--accent-main); text-transform: uppercase; margin-bottom: 0.75rem;" id="species-explorer-source">North Atlantic & Alaska</div>
+                        <h3 id="species-explorer-title" style="font-size: 3rem; margin-bottom: 1rem;">Wild & Farmed Salmon</h3>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;" id="species-explorer-tags">
+                            <span style="font-size: 0.75rem; background: var(--bg-primary); padding: 0.3rem 0.75rem; border-radius: 100px; border: 1px solid var(--border-color); font-weight: 600;">Sashimi Grade</span>
+                            <span style="font-size: 0.75rem; background: var(--bg-primary); padding: 0.3rem 0.75rem; border-radius: 100px; border: 1px solid var(--border-color); font-weight: 600;">Omega-3 Rich</span>
+                            <span style="font-size: 0.75rem; background: var(--bg-primary); padding: 0.3rem 0.75rem; border-radius: 100px; border: 1px solid var(--border-color); font-weight: 600;">Hook-and-Line / Pens</span>
+                        </div>
+                        <p id="species-explorer-desc" style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem; max-width: 500px; line-height: 1.6;">Featuring wild-caught Alaskan King and Sockeye Salmon alongside ASC-certified North Atlantic Salmon. Rich in natural omega-3s with a pristine, buttery finish, landed under strict harvest quotas.</p>
                         <a href="products.html" class="btn btn-secondary">View Species Details</a>
                     </div>
                 </div>
@@ -163,37 +177,37 @@
         <!-- SECTION 04 - OCEAN-TO-TABLE JOURNEY -->
         <section class="section-padding">
             <div class="container text-center reveal">
-                <h2 style="margin-bottom: 1rem;">OCEAN TO TABLE</h2>
-                <p style="color: var(--text-secondary); max-width: 600px; margin-inline: auto;">Our transparent supply chain ensures quality, freshness, and accountability at every stage.</p>
+                <h2 style="margin-bottom: 1rem;">HOW OUR SEAFOOD REACHES YOUR TABLE: THE 4-STAGE COLD CHAIN</h2>
+                <p style="color: var(--text-secondary); max-width: 650px; margin-inline: auto;">From ocean landing to chef walk-in cooler in under 48 hours—monitored at 0°C to 2°C with scannable batch provenance at every transition.</p>
                 
                 <div class="timeline">
                     <div class="timeline-step">
                         <div class="timeline-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><path d="M12 22V8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg>
                         </div>
-                        <h4 class="timeline-title">01 SOURCE</h4>
-                        <p class="timeline-desc">Responsible wild capture or aquaculture.</p>
+                        <h4 class="timeline-title">01 HARVEST & CHILL</h4>
+                        <p class="timeline-desc">Day-boat harvesters use selective gear and slush-ice catch at sea to 0°C within minutes.</p>
                     </div>
                     <div class="timeline-step">
                         <div class="timeline-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 14l2 2 4-4"/></svg>
                         </div>
-                        <h4 class="timeline-title">02 VERIFY</h4>
-                        <p class="timeline-desc">Quality check and lot registration.</p>
+                        <h4 class="timeline-title">02 DIGITAL LOT TAG</h4>
+                        <p class="timeline-desc">Landed lots are logged with GPS coordinates, vessel identity, and tamper-proof QR tracking codes.</p>
                     </div>
                     <div class="timeline-step">
                         <div class="timeline-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/><path d="M12 7v5"/></svg>
                         </div>
-                        <h4 class="timeline-title">03 CHILL</h4>
-                        <p class="timeline-desc">Immediate temperature control applied.</p>
+                        <h4 class="timeline-title">03 UNBROKEN COLD CHAIN</h4>
+                        <p class="timeline-desc">Smart-sensor chilled transport maintains continuous 0°C–2°C logs without warehouse delays.</p>
                     </div>
                     <div class="timeline-step">
                         <div class="timeline-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                         </div>
-                        <h4 class="timeline-title">04 DELIVER</h4>
-                        <p class="timeline-desc">Monitored cold-chain distribution.</p>
+                        <h4 class="timeline-title">04 DIRECT DELIVERY</h4>
+                        <p class="timeline-desc">Delivered straight to restaurants and hospitality kitchens within 24–48 hours of landing.</p>
                     </div>
                 </div>
             </div>
@@ -205,14 +219,14 @@
                 <div class="reveal delay-100" style="position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 1/1;">
                     <img src="assets/images/aquaculture.webp" alt="Responsible aquaculture" style="width: 100%; height: 100%; object-fit: cover;">
                     <div style="position: absolute; bottom: 2rem; inset-inline-start: 2rem; background: var(--glass-bg); padding: 1.5rem; border-radius: var(--radius-md); backdrop-filter: blur(8px);">
-                        <div style="font-weight: 700; margin-bottom: 0.25rem;">Traceability Focus</div>
-                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Reducing waste & ensuring freshness.</div>
+                        <div style="font-weight: 700; margin-bottom: 0.25rem;">Direct Sourcing Integrity</div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Certified MSC/ASC waters & zero bottom trawling.</div>
                     </div>
                 </div>
                 <div class="reveal">
-                    <h2 class="editorial-heading" style="margin-bottom: 2rem;">BETTER SOURCING STARTS BEFORE THE CATCH.</h2>
-                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">Our commitment to sustainability isn't an afterthought—it is the foundation of our supply chain. We work exclusively with suppliers who practice responsible fishing and progressive aquaculture.</p>
-                    <p style="margin-bottom: 2rem; color: var(--text-secondary);">By aligning with seasonal sourcing cycles and maintaining strict traceability protocols, we help premium kitchens reduce unnecessary waste while serving exceptional seafood.</p>
+                    <h2 class="editorial-heading" style="margin-bottom: 2rem;">WHERE OUR SEAFOOD IS SOURCED: ETHICAL WATERS & CERTIFIED FISHERIES.</h2>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">Our commitment to sustainability defines every species we carry. We source exclusively from verified partners across three primary oceanic regions: the icy waters of the North Atlantic (wild cod, salmon, and mackerel), the protected wild runs of Alaska and the Pacific Rim (wild King Salmon, Sockeye, and Snow Crab), and certified organic coastal aquaculture lagoons (responsibly raised sea bass and king prawns).</p>
+                    <p style="margin-bottom: 2rem; color: var(--text-secondary);">By honoring natural seasonal runs, enforcing selective single-line and pot gears that eliminate bycatch, and rejecting chemical additives or preventive antibiotics, we safeguard marine biodiversity while delivering pure, ocean-fresh seafood directly to culinary professionals.</p>
                     <a href="about.html" class="btn btn-secondary">Learn About Our Practices</a>
                 </div>
             </div>
@@ -223,7 +237,7 @@
             <div style="position: absolute; inset: 0; opacity: 0.1; background-image: radial-gradient(circle at 2px 2px, var(--c-sand) 1px, transparent 0); background-size: 32px 32px;"></div>
             <div class="container relative z-10 text-center reveal">
                 <h2 style="color: var(--c-sand); margin-bottom: 1.5rem; max-width: 800px; margin-inline: auto;">KNOW WHERE YOUR SEAFOOD COMES FROM.</h2>
-                <p style="color: rgba(244, 239, 230, 0.8); margin-bottom: 3rem; font-size: 1.1rem; max-width: 600px; margin-inline: auto;">Explore species, sourcing methods and traceability information before your next order.</p>
+                <p style="color: rgba(244, 239, 230, 0.8); margin-bottom: 3rem; font-size: 1.1rem; max-width: 600px; margin-inline: auto;">Explore species, verified sourcing grounds, and unbroken cold-chain delivery before placing your next wholesale order.</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                     <a href="products.html" class="btn btn-secondary" style="border-color: var(--c-sand); color: var(--c-sand);">Explore Products</a>
                     <a href="#" class="btn btn-primary" data-modal-target="wholesale-modal">Request Wholesale</a>
@@ -310,11 +324,11 @@
                 <div>
                     <div class="nav-logo" style="margin-bottom: 1.5rem;">
                         <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="45" stroke="#1f2937" stroke-width="8" fill="none" />
-    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="#1f2937"/>
-    <polygon points="63,35 75,25 72,35 75,45" fill="#1f2937"/>
+    <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="logo-frame" />
+    <path d="M 15 55 Q 35 40 50 55 T 85 55" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 15 70 Q 35 55 50 70 T 85 70" stroke="var(--accent-main, #168C8C)" stroke-width="6" fill="none" stroke-linecap="round" class="logo-wave" />
+    <path d="M 65 35 C 65 25, 45 20, 35 30 C 40 33, 40 37, 35 40 C 45 50, 65 45, 65 35 Z" fill="currentColor" class="logo-fish" />
+    <polygon points="63,35 75,25 72,35 75,45" fill="currentColor" class="logo-fish" />
 </svg>
                         <div>
                             <div class="nav-logo-text" style="font-size: 1rem;">TIDE & TRACE</div>
