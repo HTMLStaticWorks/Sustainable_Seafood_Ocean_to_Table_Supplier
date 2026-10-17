@@ -185,24 +185,36 @@ document.addEventListener('DOMContentLoaded', () => {
             if (card.dataset.moq && modalMoq) modalMoq.textContent = card.dataset.moq;
           }
         } else if (targetId === 'wholesale-modal') {
-          // Check if triggered from a product card or species modal
+          // Check if triggered from a product card, species modal, or showcase card
           const card = trigger.closest('.product-card');
           const isFromSpeciesModal = trigger.closest('#species-modal');
+          const showcaseCard = trigger.closest('.showcase-species-card');
           let speciesName = '';
           let speciesPrice = '';
           let speciesSize = '';
           let speciesMoq = '';
+          let speciesGear = '';
+          let speciesCuts = '';
 
           if (card) {
             speciesName = card.querySelector('.product-title')?.textContent.trim() || '';
             speciesPrice = card.dataset.price || card.querySelector('.price-amount')?.textContent.trim() || '';
             speciesSize = card.dataset.size || '';
             speciesMoq = card.dataset.moq || '';
+            speciesGear = card.dataset.method || '';
+            speciesCuts = card.dataset.cuts || '';
           } else if (isFromSpeciesModal) {
             speciesName = document.getElementById('modal-species-title')?.textContent.trim() || '';
             speciesPrice = document.getElementById('modal-species-price')?.textContent.trim() || '';
             speciesSize = document.getElementById('modal-species-size')?.textContent.trim() || '';
             speciesMoq = document.getElementById('modal-species-moq')?.textContent.trim() || '';
+            speciesGear = document.getElementById('modal-species-method')?.textContent.trim() || '';
+            speciesCuts = document.getElementById('modal-species-cuts')?.textContent.trim() || '';
+          } else if (showcaseCard || trigger.dataset.species) {
+            speciesName = trigger.dataset.species || showcaseCard?.querySelector('.showcase-species-title')?.textContent.trim() || '';
+            speciesGear = trigger.dataset.gear || '';
+            speciesCuts = trigger.dataset.cuts || '';
+            speciesMoq = trigger.dataset.moq || '';
           }
 
           if (speciesName) {
@@ -217,7 +229,14 @@ document.addEventListener('DOMContentLoaded', () => {
               }
             }
             if (messageField) {
-              messageField.value = `Wholesale Purchasing Order:\n- Species: ${speciesName}\n- Quoted Rate: ${speciesPrice}\n- Calibration / Size: ${speciesSize}\n- Minimum Packaging: ${speciesMoq}\n\nPlease confirm availability, logistics dispatch date, and volume delivery quote.`;
+              let details = `Wholesale Sourcing Procurement Request:\n• Target Species: ${speciesName}`;
+              if (speciesGear) details += `\n• Harvest Gear / Method: ${speciesGear}`;
+              if (speciesCuts) details += `\n• Cut / Preparation: ${speciesCuts}`;
+              if (speciesPrice) details += `\n• Quoted Unit Rate: ${speciesPrice}`;
+              if (speciesSize) details += `\n• Size / Calibration: ${speciesSize}`;
+              if (speciesMoq) details += `\n• Order Unit / MOQ: ${speciesMoq}`;
+              details += `\n\nPlease provide current harvest availability, logistics dispatch options, and formal volume price schedule.`;
+              messageField.value = details;
             }
           }
         }
@@ -285,6 +304,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const speciesDesc = document.getElementById('species-explorer-desc');
   const speciesSource = document.getElementById('species-explorer-source');
   const speciesTags = document.getElementById('species-explorer-tags');
+  const speciesMethod = document.getElementById('species-explorer-method');
+  const speciesCuts = document.getElementById('species-explorer-cuts');
+  const speciesTemp = document.getElementById('species-explorer-temp');
+  const speciesMoq = document.getElementById('species-explorer-moq');
+  const speciesOrderBtn = document.getElementById('species-explorer-order-btn');
   
   if (speciesBtns.length > 0 && speciesImage) {
     speciesBtns.forEach(btn => {
@@ -300,6 +324,23 @@ document.addEventListener('DOMContentLoaded', () => {
           speciesDesc.textContent = btn.getAttribute('data-desc');
           speciesSource.textContent = btn.getAttribute('data-source');
           
+          if (speciesMethod && btn.getAttribute('data-method')) {
+            speciesMethod.textContent = btn.getAttribute('data-method');
+          }
+          if (speciesCuts && btn.getAttribute('data-cuts')) {
+            speciesCuts.textContent = btn.getAttribute('data-cuts');
+          }
+          if (speciesTemp && btn.getAttribute('data-temp')) {
+            speciesTemp.textContent = btn.getAttribute('data-temp');
+          }
+          if (speciesMoq && btn.getAttribute('data-moq')) {
+            speciesMoq.textContent = btn.getAttribute('data-moq');
+          }
+          if (speciesOrderBtn) {
+            const speciesId = btn.getAttribute('data-species-id') || 'salmon';
+            speciesOrderBtn.href = `wholesale.html?species=${speciesId}`;
+          }
+
           const tags = btn.getAttribute('data-tags');
           if (tags && speciesTags) {
             speciesTags.innerHTML = tags.split(',').map(tag => 
