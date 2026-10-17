@@ -1249,6 +1249,14 @@ textarea.form-control {
   transform: translateY(0);
 }
 
+@media (max-width: 1024px) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: opacity 0.4s ease !important;
+  }
+}
+
 .delay-100 { transition-delay: 0.1s; }
 .delay-200 { transition-delay: 0.2s; }
 .delay-300 { transition-delay: 0.3s; }

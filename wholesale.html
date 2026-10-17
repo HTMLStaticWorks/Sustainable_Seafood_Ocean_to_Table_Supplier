@@ -34,7 +34,7 @@
         .type-btn.active strong { color: var(--accent-main); }
         .type-btn.active span { color: var(--text-primary); font-weight: 600; }
         
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .type-selector {
                 flex-direction: column;
                 align-items: stretch;
@@ -48,6 +48,24 @@
                 letter-spacing: 0 !important;
                 width: 100%;
                 box-sizing: border-box;
+            }
+        }
+        @media (min-width: 601px) and (max-width: 900px) {
+            .type-selector {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1rem !important;
+            }
+            .type-btn {
+                min-width: 0 !important;
+                width: 100% !important;
+            }
+            .type-selector > .type-btn:last-child {
+                grid-column: 1 / -1 !important;
+                justify-self: center !important;
+                width: 100% !important;
+                max-width: calc(50% - 0.5rem) !important;
+                margin-inline: auto !important;
             }
         }
 
@@ -106,7 +124,15 @@
             line-height: 1.65 !important;
             font-size: 0.95rem !important;
         }
-        @media (max-width: 768px) {
+        @media (min-width: 601px) and (max-width: 900px) {
+            .species-grid > .checkbox-card,
+            .checkbox-card {
+                flex: 0 0 calc((100% - 1.5rem) / 2) !important;
+                max-width: calc((100% - 1.5rem) / 2) !important;
+                width: calc((100% - 1.5rem) / 2) !important;
+            }
+        }
+        @media (max-width: 600px) {
             .species-grid > .checkbox-card,
             .checkbox-card {
                 flex: 0 0 100% !important;
@@ -405,22 +431,22 @@
 
     <main style="padding-top: var(--nav-height);">
         <!-- SECTION 01 - HERO -->
-        <section class="hero-ocean" style="min-height: 70svh; align-items: center;">
+        <section class="hero-ocean" style="min-height: 60svh; align-items: center;">
             <div class="hero-bg">
                 <img src="assets/images/wholesale.webp" alt="Wholesale operations">
             </div>
             <div class="hero-overlay" style="background: rgba(7, 59, 76, 0.85);"></div>
             <div class="container relative z-10 text-center reveal">
-                <h1 class="editorial-heading" style="color: var(--c-sand); margin-bottom: 1.5rem;">SEAFOOD SUPPLY BUILT AROUND YOUR OPERATION.</h1>
-                <p style="color: rgba(244, 239, 230, 0.8); font-size: 1.1rem; max-width: 600px; margin-inline: auto; margin-bottom: 2rem;">Tell us what species, formats and volumes you need, and our team can review your enquiry.</p>
+                <h1 class="editorial-heading" style="color: var(--c-sand); margin-bottom: 1.25rem;">SEAFOOD SUPPLY BUILT AROUND YOUR OPERATION.</h1>
+                <p style="color: rgba(244, 239, 230, 0.8); font-size: 1.1rem; max-width: 600px; margin-inline: auto; margin-bottom: 1.5rem;">Tell us what species, formats and volumes you need, and our team can review your enquiry.</p>
                 <a href="#" data-modal-target="wholesale-modal" class="btn btn-primary">START WHOLESALE ENQUIRY</a>
             </div>
         </section>
 
         <!-- SECTION 01B - SEAFOOD OPTIONS AVAILABLE FOR SOURCING (Visual Showcase) -->
         <section class="section-padding" style="background-color: var(--bg-primary); border-bottom: 1px solid var(--border-color);">
-            <div class="container reveal">
-                <div class="text-center" style="max-width: 780px; margin-inline: auto; margin-bottom: 3.5rem;">
+            <div class="container">
+                <div class="text-center reveal" style="max-width: 780px; margin-inline: auto; margin-bottom: 3.5rem;">
                     <span class="hero-subtitle" style="color: var(--accent-main); margin-bottom: 0.75rem;">Direct Vessel &amp; Farm Provenance</span>
                     <h2 class="editorial-heading" style="margin-bottom: 1.25rem;">SEAFOOD OPTIONS AVAILABLE FOR SOURCING</h2>
                     <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.6;">Browse our core wild-capture and certified eco-aquaculture species below. Each variety is harvested by verified partner fleets, held under unbroken cold chain, and available in custom wholesale cuts for hospitality operations.</p>
@@ -738,7 +764,7 @@
                     
                     <form id="wholesale-builder">
                         <!-- SECTION 02 - BUSINESS TYPE -->
-                        <div class="reveal" style="margin-bottom: 3.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 2.5rem;">
+                        <div style="margin-bottom: 3.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 2.5rem;">
                             <h3 style="margin-bottom: 0.5rem; text-align: center;">1. BUSINESS TYPE &amp; PROCUREMENT TIER</h3>
                             <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1.75rem; font-size: 0.9rem;">Select your operational profile so our sourcing desk can align minimum volumes, delivery cadence, and custom portioning.</p>
                             <div class="type-selector">
@@ -781,7 +807,7 @@
                         </div>
 
                         <!-- SECTION 03 - WHAT ARE YOU SOURCING? -->
-                        <div class="reveal" style="margin-bottom: 3.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 3rem;">
+                        <div style="margin-bottom: 3.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 3rem;">
                             <h3 style="margin-bottom: 0.5rem; text-align: center;">2. WHAT SEAFOOD ARE YOU SOURCING?</h3>
                             <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.95rem; max-width: 750px; margin-inline: auto;">Select all seafood varieties required for your operation. Each option displays verified fishing gear, harvest zones, commercial cut formats, and temperature specifications to help you make informed sourcing decisions.</p>
                             
@@ -1306,7 +1332,7 @@
                         </div>
 
                         <!-- SECTION 04 - ENQUIRY DETAILS -->
-                        <div class="reveal">
+                        <div>
                             <h3 style="margin-bottom: 2rem; text-align: center;">3. CONTACT DETAILS</h3>
                             
                             <div class="grid-2" style="gap: 1.5rem;">

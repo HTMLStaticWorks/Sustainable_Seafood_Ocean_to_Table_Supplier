@@ -102,6 +102,15 @@ document.addEventListener('DOMContentLoaded', () => {
      SCROLL REVEAL ANIMATIONS
      ========================================================================== */
   const revealElements = document.querySelectorAll('.reveal');
+  
+  // Immediately activate elements already visible in or near the viewport on load
+  revealElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('active');
+    }
+  });
+
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -111,8 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, {
     root: null,
-    threshold: 0.15,
-    rootMargin: "0px 0px -50px 0px"
+    threshold: 0.01,
+    rootMargin: "50px 0px 50px 0px"
   });
 
   revealElements.forEach(el => revealObserver.observe(el));
