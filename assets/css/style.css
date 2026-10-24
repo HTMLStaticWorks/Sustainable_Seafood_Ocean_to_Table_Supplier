@@ -687,6 +687,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .product-header-info {
   margin-bottom: 0.6rem;
+  min-height: 3.2rem;
 }
 
 .product-title {
@@ -709,6 +710,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 0.88rem;
   line-height: 1.5;
   margin-bottom: 1.15rem;
+  min-height: 4rem;
 }
 
 /* Product Specifications Grid */
